@@ -1,66 +1,122 @@
 package com.usachev;
 
-import org.osmtools.pbf.OsmProcessor;
-import org.osmtools.pbf.data.Bounds;
-import org.osmtools.pbf.data.Node;
-import org.osmtools.pbf.data.Relation;
-import org.osmtools.pbf.data.RelationMember;
-import org.osmtools.pbf.data.Tag;
-import org.osmtools.pbf.data.Way;
+import org.openstreetmap.osmosis.core.container.v0_6.BoundContainer;
+import org.openstreetmap.osmosis.core.container.v0_6.EntityContainer;
+import org.openstreetmap.osmosis.core.container.v0_6.EntityProcessor;
+import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
+import org.openstreetmap.osmosis.core.container.v0_6.RelationContainer;
+import org.openstreetmap.osmosis.core.container.v0_6.WayContainer;
+import org.openstreetmap.osmosis.core.task.v0_6.Sink;
+import org.openstreetmap.osmosis.xml.common.CompressionMethod;
+import org.openstreetmap.osmosis.xml.v0_6.XmlWriter;
+import org.openstreetmap.osmosis.xml.v0_6.impl.FastXmlParser;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
-import crosby.binary.file.BlockInputStream;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+
 
 /**
  * Created by Andrey on 16.11.2016.
  */
-
 public class Main {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args) throws IOException, XMLStreamException
     {
-//        Main.class.getClass().getPackage();
-//        InputStream input = Main.class.getResourceAsStream("ptz.osm.pbf");
-        InputStream input = new FileInputStream("ptz.osm.pbf");
+        InputStream input = new FileInputStream("ptz.osm_02.osm");
 
-        MyParser parser = new MyParser(new OsmProcessor() {
+        final XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
 
+        XMLInputFactory factory = XMLInputFactory.newInstance();
+        // configure it to create readers that coalesce adjacent character sections
+        factory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.TRUE);
+        XMLStreamReader r = factory.createXMLStreamReader(input);
+        Sink sink = new Sink() {
             @Override
-            public void process(Bounds bounds) {
+            public void process(EntityContainer entityContainer) {
+                entityContainer.process(new EntityProcessor() {
+                    @Override
+                    public void process(BoundContainer bound) {
+                        System.out.println("fds");
+                        xmlWriter.process(bound);
+//                        xmlWriter.writeBounds(bound);
+                    }
+
+                    @Override
+                    public void process(NodeContainer node) {
+                        log(node.getEntity().toString());
+                        xmlWriter.process(node);
+//                        node.getEntity().getWriteableInstance().toString();
+                    }
+
+                    @Override
+                    public void process(WayContainer way) {
+                        xmlWriter.process(way);
+/*                        for (Tag tag : way.getEntity().getTags())
+                        if (tag.getValue().equals("sidewalk") || tag.getKey().equals("sidewalk")) {
+                            XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
+                            xmlWriter.process(new EntityContainer() {
+                                @Override
+                                public void process(EntityProcessor processor) {
+
+                                }
+
+                                @Override
+                                public Entity getEntity() {
+                                    return null;
+                                }
+
+                                @Override
+                                public EntityContainer getWriteableInstance() {
+                                    return null;
+                                }
+
+                                @Override
+                                public void store(StoreWriter writer, StoreClassRegister storeClassRegister) {
+
+                                }
+                            });
+                        }*/
+//                            System.out.println(tag.getKey() + " " + tag.getValue());
+                    }
+
+                    @Override
+                    public void process(RelationContainer relation) {
+                        xmlWriter.process(relation);
+                    }
+                });
             }
 
             @Override
-            public void process(Node node) {
+            public void complete() {
+
             }
 
             @Override
-            public void process(Way way) {
-//                if (way.getId() == 316635916)
-//                    System.out.print(way.getNodes());
+            public void initialize(Map<String, Object> metaData) {
 
-/*                for (Tag tag : way.getTags()) {
-                    System.out.print(tag.getKey() + " ");
-//                    if (tag.getKey().equals("sidewalk"))
-//                        System.out.print(tag.getValue() + '\n');
-                }
-                        System.out.print('\n');*/
             }
 
             @Override
-            public void process(Relation relation) {
-/*                System.out.println("--------------------------------");
-                for (RelationMember member : relation.getMembers())
-                    if (member.getRole().equals("outer"))
-                    System.out.println(member.getId() + " " + member.getRole() + " " + member.getType());
-                System.out.println("--------------------------------");*/
+            public void release() {
+
             }
+        };
 
-        });
+        FastXmlParser fastXmlParser = new FastXmlParser(sink, r, true);
 
-        new BlockInputStream(input, parser).process();
+        fastXmlParser.readOsm();
+        xmlWriter.complete();
+        xmlWriter.release();
+    }
 
+    private static void log(String l) {
+        System.out.println(l);
     }
 
 }

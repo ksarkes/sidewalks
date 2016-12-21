@@ -8,4 +8,5 @@ dependencies {
     // https://mvnrepository.com/artifact/de.grundid.osmtools/osm-tools-pbf
     compile group: 'de.grundid.osmtools', name: 'osm-tools-pbf', version: '1.1.1'
 
+    compile group: 'org.openstreetmap.osmosis', name: 'osmosis-xml', version: '0.45'
 }
