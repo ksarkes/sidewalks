@@ -30,64 +30,33 @@ public class Main {
     {
         InputStream input = new FileInputStream("ptz.osm_02.osm");
 
-        final XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
-
         XMLInputFactory factory = XMLInputFactory.newInstance();
         // configure it to create readers that coalesce adjacent character sections
         factory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.TRUE);
         XMLStreamReader r = factory.createXMLStreamReader(input);
+        SidewalkProcessor processor = new SidewalkProcessor();
         Sink sink = new Sink() {
             @Override
             public void process(EntityContainer entityContainer) {
                 entityContainer.process(new EntityProcessor() {
                     @Override
                     public void process(BoundContainer bound) {
-                        System.out.println("fds");
-                        xmlWriter.process(bound);
-//                        xmlWriter.writeBounds(bound);
+                        processor.addBoundContainer(bound);
                     }
 
                     @Override
                     public void process(NodeContainer node) {
-                        log(node.getEntity().toString());
-                        xmlWriter.process(node);
-//                        node.getEntity().getWriteableInstance().toString();
+                        processor.addNodeContainer(node);
                     }
 
                     @Override
                     public void process(WayContainer way) {
-                        xmlWriter.process(way);
-/*                        for (Tag tag : way.getEntity().getTags())
-                        if (tag.getValue().equals("sidewalk") || tag.getKey().equals("sidewalk")) {
-                            XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
-                            xmlWriter.process(new EntityContainer() {
-                                @Override
-                                public void process(EntityProcessor processor) {
-
-                                }
-
-                                @Override
-                                public Entity getEntity() {
-                                    return null;
-                                }
-
-                                @Override
-                                public EntityContainer getWriteableInstance() {
-                                    return null;
-                                }
-
-                                @Override
-                                public void store(StoreWriter writer, StoreClassRegister storeClassRegister) {
-
-                                }
-                            });
-                        }*/
-//                            System.out.println(tag.getKey() + " " + tag.getValue());
+                        processor.addWayContainer(way);
                     }
 
                     @Override
                     public void process(RelationContainer relation) {
-                        xmlWriter.process(relation);
+                        processor.addRelationContainer(relation);
                     }
                 });
             }
@@ -109,14 +78,10 @@ public class Main {
         };
 
         FastXmlParser fastXmlParser = new FastXmlParser(sink, r, true);
-
         fastXmlParser.readOsm();
-        xmlWriter.complete();
-        xmlWriter.release();
+
+        processor.process();
     }
 
-    private static void log(String l) {
-        System.out.println(l);
-    }
 
 }

@@ -6429,23 +6429,6 @@
     <tag k="short_name" v="ПетрГУ"/>
     <tag k="website" v="petrsu.ru"/>
   </way>
-  <way id="32939557" version="7" timestamp="2014-06-01T13:18:47Z" uid="1045498" user="Serj Volkov" changeset="22673092">
-    <nd ref="370927630"/>
-    <nd ref="2451701248"/>
-    <nd ref="1745321874"/>
-    <nd ref="370927641"/>
-    <nd ref="370927645"/>
-    <nd ref="370927648"/>
-    <nd ref="370927650"/>
-    <nd ref="370927652"/>
-    <nd ref="370927654"/>
-    <nd ref="370927656"/>
-    <nd ref="370927660"/>
-    <nd ref="2451704331"/>
-    <nd ref="370927662"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="32942338" version="4" timestamp="2013-07-19T12:17:41Z" uid="215471" user="dragonling" changeset="17011238">
     <nd ref="443211142"/>
     <nd ref="370948660"/>
@@ -6681,57 +6664,11 @@
     <nd ref="1406761237"/>
     <tag k="landuse" v="residential"/>
   </way>
-  <way id="34267495" version="4" timestamp="2014-10-17T12:49:38Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007443"/>
-    <nd ref="3135041847"/>
-    <nd ref="3135041861"/>
-    <nd ref="3135041868"/>
-    <nd ref="393007437"/>
-    <nd ref="3135041893"/>
-    <nd ref="393007388"/>
-    <nd ref="3135041892"/>
-    <nd ref="3135041886"/>
-    <nd ref="393007386"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
   <way id="34267580" version="6" timestamp="2012-06-09T19:06:00Z" uid="215471" user="dragonling" changeset="11848027">
     <nd ref="393006913"/>
     <nd ref="393006912"/>
     <nd ref="393006915"/>
     <nd ref="392995870"/>
-  </way>
-  <way id="34267619" version="14" timestamp="2016-04-08T07:24:36Z" uid="1272223" user="Транквилитатор" changeset="38398853">
-    <nd ref="393007397"/>
-    <nd ref="2938709820"/>
-    <nd ref="2938709821"/>
-    <nd ref="2938709811"/>
-    <nd ref="2938709809"/>
-    <nd ref="2938709808"/>
-    <nd ref="393007393"/>
-    <nd ref="3135041881"/>
-    <nd ref="3135041889"/>
-    <nd ref="3135041894"/>
-    <nd ref="3135041900"/>
-    <nd ref="393007392"/>
-    <nd ref="2099931536"/>
-    <nd ref="4107150982"/>
-    <nd ref="2099931531"/>
-    <nd ref="2099931556"/>
-    <nd ref="2099933281"/>
-    <nd ref="4107150988"/>
-    <nd ref="4107150991"/>
-    <nd ref="4107150992"/>
-    <nd ref="3135042346"/>
-    <nd ref="2099931519"/>
-    <nd ref="393007403"/>
-    <nd ref="3135042342"/>
-    <nd ref="2943102541"/>
-    <nd ref="393007401"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
   </way>
   <way id="34267742" version="8" timestamp="2016-06-27T20:31:50Z" uid="1272223" user="Транквилитатор" changeset="40330124">
     <nd ref="393006769"/>
@@ -6749,13 +6686,6 @@
     <nd ref="393006949"/>
     <nd ref="393006769"/>
     <tag k="landuse" v="residential"/>
-  </way>
-  <way id="34267800" version="5" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007431"/>
-    <nd ref="3135017826"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
   </way>
   <way id="34267819" version="7" timestamp="2014-12-10T08:52:52Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="393005240"/>
@@ -6834,58 +6764,6 @@
     <nd ref="393007284"/>
     <nd ref="536508194"/>
   </way>
-  <way id="34268096" version="9" timestamp="2014-12-27T18:42:53Z" uid="384084" user="Kostik" changeset="27737379">
-    <nd ref="393007311"/>
-    <nd ref="3135041925"/>
-    <nd ref="2098210688"/>
-    <nd ref="2098210676"/>
-    <nd ref="2098210719"/>
-    <nd ref="1766695087"/>
-    <nd ref="393007305"/>
-    <nd ref="2098187415"/>
-    <nd ref="1468343465"/>
-    <nd ref="3135042350"/>
-    <nd ref="2098187528"/>
-    <nd ref="3135042347"/>
-    <nd ref="393007299"/>
-    <nd ref="2098210723"/>
-    <nd ref="2099931533"/>
-    <nd ref="2099931515"/>
-    <nd ref="2099931493"/>
-    <nd ref="3255563376"/>
-    <nd ref="393007310"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="34268127" version="9" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1766695107"/>
-    <nd ref="393007306"/>
-    <nd ref="3135042401"/>
-    <nd ref="1745344148"/>
-    <nd ref="393007344"/>
-    <nd ref="3135042365"/>
-    <nd ref="3135042352"/>
-    <nd ref="2098210717"/>
-    <nd ref="393007342"/>
-    <nd ref="2452436688"/>
-    <nd ref="1468343462"/>
-    <nd ref="1745344054"/>
-    <nd ref="3227796313"/>
-    <nd ref="3227796316"/>
-    <nd ref="2452436689"/>
-    <nd ref="393007348"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="34268152" version="7" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007314"/>
-    <nd ref="3135041916"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
   <way id="34268221" version="11" timestamp="2015-04-21T11:22:05Z" uid="1272223" user="Транквилитатор" changeset="30375998">
     <nd ref="393007218"/>
     <nd ref="544231078"/>
@@ -6935,41 +6813,6 @@
     <nd ref="393007171"/>
     <nd ref="393007155"/>
     <tag k="landuse" v="residential"/>
-  </way>
-  <way id="34268427" version="7" timestamp="2014-12-10T08:52:46Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="393007192"/>
-    <nd ref="2916307144"/>
-    <nd ref="2916307143"/>
-    <nd ref="393007172"/>
-    <nd ref="2916307141"/>
-    <nd ref="1468343437"/>
-    <nd ref="1766695105"/>
-    <nd ref="393007167"/>
-    <nd ref="3135042362"/>
-    <nd ref="3227796298"/>
-    <nd ref="1469154415"/>
-    <nd ref="3135041928"/>
-    <nd ref="393007169"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="34268503" version="6" timestamp="2015-04-21T11:22:04Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="393007189"/>
-    <nd ref="3227796285"/>
-    <nd ref="3227796280"/>
-    <nd ref="393007187"/>
-    <nd ref="3469286837"/>
-    <nd ref="3227796289"/>
-    <nd ref="393007184"/>
-    <nd ref="3135042329"/>
-    <nd ref="393007191"/>
-    <nd ref="3135042344"/>
-    <nd ref="3135042336"/>
-    <nd ref="3135041924"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
   </way>
   <way id="34268540" version="4" timestamp="2012-05-04T13:41:35Z" uid="215471" user="dragonling" changeset="11497943">
     <nd ref="393007205"/>
@@ -10865,39 +10708,12 @@
     <tag k="highway" v="service"/>
     <tag k="living_street" v="yes"/>
   </way>
-  <way id="47934858" version="3" timestamp="2014-10-17T12:49:42Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="609673518"/>
-    <nd ref="3135017815"/>
-    <nd ref="609673507"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="47934859" version="3" timestamp="2013-07-30T11:00:53Z" uid="215471" user="dragonling" changeset="17151260">
     <nd ref="392987180"/>
     <nd ref="609673511"/>
     <tag k="highway" v="service"/>
     <tag k="incline" v="up"/>
     <tag k="living_street" v="yes"/>
-  </way>
-  <way id="48056583" version="9" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="370948697"/>
-    <nd ref="370948699"/>
-    <nd ref="370948701"/>
-    <nd ref="2916307149"/>
-    <nd ref="370948704"/>
-    <nd ref="370948706"/>
-    <nd ref="370948708"/>
-    <nd ref="1692701795"/>
-    <nd ref="370948711"/>
-    <nd ref="3227796311"/>
-    <nd ref="610957656"/>
-    <nd ref="3227796314"/>
-    <nd ref="2916307150"/>
-    <nd ref="2930479996"/>
-    <nd ref="370948792"/>
-    <nd ref="370948715"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="fine_gravel"/>
   </way>
   <way id="48056584" version="2" timestamp="2014-07-24T12:22:18Z" uid="1045498" user="Serj Volkov" changeset="24329537">
     <nd ref="2977390693"/>
@@ -10933,18 +10749,6 @@
     <tag k="bridge" v="yes"/>
     <tag k="highway" v="tertiary"/>
   </way>
-  <way id="48243474" version="3" timestamp="2012-06-09T19:05:56Z" uid="215471" user="dragonling" changeset="11848027">
-    <nd ref="370951837"/>
-    <nd ref="370951840"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="48243475" version="2" timestamp="2012-06-09T19:05:57Z" uid="215471" user="dragonling" changeset="11848027">
-    <nd ref="370951840"/>
-    <nd ref="1781833897"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="48331494" version="16" timestamp="2015-08-03T10:32:05Z" uid="1832883" user="Jake Strine" changeset="33066000">
     <nd ref="614004465"/>
     <nd ref="1781833814"/>
@@ -10960,46 +10764,6 @@
     <tag k="trolley_wire" v="yes"/>
     <tag k="addr:postcode" v="185035"/>
     <tag k="turn:lanes:forward" v="through;left|through;right"/>
-  </way>
-  <way id="93702009" version="7" timestamp="2015-03-20T16:45:12Z" uid="384084" user="Kostik" changeset="29619262">
-    <nd ref="1406172306"/>
-    <nd ref="418090012"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="93702010" version="7" timestamp="2013-07-01T11:56:33Z" uid="215471" user="dragonling" changeset="16776747">
-    <nd ref="392986545"/>
-    <nd ref="1088078203"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="108922614" version="2" timestamp="2012-05-08T10:14:58Z" uid="215471" user="dragonling" changeset="11537474">
-    <nd ref="1248462653"/>
-    <nd ref="1248462607"/>
-    <nd ref="1745321812"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="108922617" version="2" timestamp="2012-05-08T10:14:58Z" uid="215471" user="dragonling" changeset="11537474">
-    <nd ref="1248462616"/>
-    <nd ref="1248462684"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="108922621" version="2" timestamp="2012-05-08T10:14:57Z" uid="215471" user="dragonling" changeset="11537474">
-    <nd ref="1248462684"/>
-    <nd ref="1248462653"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="108922629" version="1" timestamp="2011-04-17T14:39:19Z" uid="215471" user="dragonling" changeset="7887326">
-    <nd ref="1248462604"/>
-    <nd ref="1248462688"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="108922632" version="2" timestamp="2011-08-04T17:07:55Z" uid="500370" user="Евгений Игоревич" changeset="8921471">
     <nd ref="1248462635"/>
@@ -11042,34 +10806,6 @@
     <nd ref="1248462661"/>
     <nd ref="1248462699"/>
     <nd ref="1248462638"/>
-  </way>
-  <way id="108922647" version="3" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321796"/>
-    <nd ref="3227796472"/>
-    <nd ref="1248462662"/>
-    <nd ref="1248462637"/>
-    <nd ref="1248462604"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="108922650" version="2" timestamp="2012-05-08T10:14:58Z" uid="215471" user="dragonling" changeset="11537474">
-    <nd ref="370927662"/>
-    <nd ref="1248462613"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="108922655" version="4" timestamp="2014-03-31T05:17:22Z" uid="1045498" user="Serj Volkov" changeset="21412867">
-    <nd ref="1248462613"/>
-    <nd ref="370927664"/>
-    <nd ref="370927666"/>
-    <nd ref="1745321797"/>
-    <nd ref="1766695228"/>
-    <nd ref="370927668"/>
-    <nd ref="2755504021"/>
-    <nd ref="370927670"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="108928287" version="7" timestamp="2015-03-08T11:36:15Z" uid="1045498" user="Serj Volkov" changeset="29328287">
     <nd ref="611278776"/>
@@ -11247,22 +10983,6 @@
     <tag k="maxspeed" v="RU:urban"/>
     <tag k="addr:postcode" v="185035"/>
   </way>
-  <way id="118829191" version="2" timestamp="2014-12-10T08:52:48Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1335828041"/>
-    <nd ref="1335828042"/>
-    <tag k="hgv" v="no"/>
-    <tag k="foot" v="yes"/>
-    <tag k="goods" v="no"/>
-    <tag k="horse" v="no"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="motorcar" v="no"/>
-    <tag k="motorcycle" v="no"/>
-    <tag k="motor_vehicle" v="no"/>
-    <tag k="bridge:structure" v="truss"/>
-  </way>
   <way id="118829195" version="3" timestamp="2012-05-26T21:33:13Z" uid="215471" user="dragonling" changeset="11710717">
     <nd ref="1335828056"/>
     <nd ref="393007352"/>
@@ -11312,14 +11032,6 @@
     <tag k="highway" v="service"/>
     <tag k="living_street" v="yes"/>
   </way>
-  <way id="122096236" version="1" timestamp="2011-07-18T07:22:27Z" uid="446670" user="pixell" changeset="8755080">
-    <nd ref="1365159044"/>
-    <nd ref="1365159041"/>
-    <nd ref="1365159043"/>
-    <nd ref="1365159045"/>
-    <nd ref="1365159038"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="126338400" version="10" timestamp="2015-08-03T10:32:05Z" uid="1832883" user="Jake Strine" changeset="33066000">
     <nd ref="392986411"/>
     <nd ref="3227796442"/>
@@ -11364,40 +11076,11 @@
     <tag k="highway" v="residential"/>
     <tag k="name:en" v="Zakamensk embankment"/>
   </way>
-  <way id="126977994" version="2" timestamp="2014-12-10T08:52:46Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1406172348"/>
-    <nd ref="1406172360"/>
-    <nd ref="1406172366"/>
-    <nd ref="1406172392"/>
-    <nd ref="1406172407"/>
-    <nd ref="1406172418"/>
-    <nd ref="1406172422"/>
-    <nd ref="1406172425"/>
-    <nd ref="1406172424"/>
-    <nd ref="1406172403"/>
-    <nd ref="1406172374"/>
-    <tag k="hgv" v="no"/>
-    <tag k="goods" v="no"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-    <tag k="motorcar" v="no"/>
-    <tag k="motorcycle" v="no"/>
-    <tag k="motor_vehicle" v="no"/>
-  </way>
   <way id="126978001" version="4" timestamp="2014-10-21T06:30:52Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="2925765915"/>
     <nd ref="2483711138"/>
     <tag k="bicycle" v="yes"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="126978030" version="1" timestamp="2011-08-20T17:06:51Z" uid="215471" user="dragonling" changeset="9075982">
-    <nd ref="1406172373"/>
-    <nd ref="1406172377"/>
-    <nd ref="1406172391"/>
-    <nd ref="1406172403"/>
-    <nd ref="1248462637"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="126978033" version="7" timestamp="2014-10-21T06:30:55Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="1406172322"/>
@@ -11783,12 +11466,6 @@
     <tag k="highway" v="steps"/>
     <tag k="incline" v="up"/>
   </way>
-  <way id="155986455" version="2" timestamp="2012-05-04T13:41:33Z" uid="215471" user="dragonling" changeset="11497943">
-    <nd ref="1683114388"/>
-    <nd ref="1740301801"/>
-    <nd ref="1683114389"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="155986460" version="2" timestamp="2012-05-04T13:41:34Z" uid="215471" user="dragonling" changeset="11497943">
     <nd ref="392987873"/>
     <nd ref="1683114385"/>
@@ -11799,13 +11476,6 @@
     <nd ref="1740301826"/>
     <nd ref="544211618"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="155986461" version="3" timestamp="2016-05-05T04:51:03Z" uid="1045498" user="taranarmo" changeset="39111915">
-    <nd ref="1683114423"/>
-    <nd ref="4166741791"/>
-    <nd ref="1683114426"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="155986463" version="2" timestamp="2012-05-04T13:41:36Z" uid="215471" user="dragonling" changeset="11497943">
     <nd ref="1683114399"/>
@@ -11856,22 +11526,6 @@
     <tag k="highway" v="path"/>
     <tag k="surface" v="compacted"/>
   </way>
-  <way id="157034800" version="2" timestamp="2014-06-24T03:38:51Z" uid="1045498" user="Serj Volkov" changeset="23114325">
-    <nd ref="1692701809"/>
-    <nd ref="1692701811"/>
-    <nd ref="2930479995"/>
-    <nd ref="610957656"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="157034801" version="2" timestamp="2014-12-10T08:52:49Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1692701757"/>
-    <nd ref="1692701750"/>
-    <nd ref="1692701747"/>
-    <nd ref="3227796294"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="compacted"/>
-  </way>
   <way id="157034802" version="1" timestamp="2012-03-27T04:07:57Z" uid="215471" user="dragonling" changeset="11112451">
     <nd ref="1692701806"/>
     <nd ref="1692701796"/>
@@ -11879,41 +11533,6 @@
     <nd ref="1692701808"/>
     <nd ref="1692701809"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="157034803" version="3" timestamp="2014-12-10T08:52:51Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1692701779"/>
-    <nd ref="370948708"/>
-    <nd ref="1692701786"/>
-    <nd ref="1692701758"/>
-    <nd ref="1692701757"/>
-    <nd ref="3227796296"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="fine_gravel"/>
-  </way>
-  <way id="157034804" version="2" timestamp="2014-10-15T09:34:29Z" uid="1272223" user="Транквилитатор" changeset="26090546">
-    <nd ref="370948699"/>
-    <nd ref="1692701784"/>
-    <nd ref="1692701774"/>
-    <nd ref="1692701762"/>
-    <nd ref="1692701760"/>
-    <nd ref="1692701758"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="fine_gravel"/>
-  </way>
-  <way id="157034805" version="3" timestamp="2013-05-16T14:22:38Z" uid="215471" user="dragonling" changeset="16153910">
-    <nd ref="1692701775"/>
-    <nd ref="1692701767"/>
-    <nd ref="1692701765"/>
-    <nd ref="1692701772"/>
-    <nd ref="1692701777"/>
-    <nd ref="1692701781"/>
-    <nd ref="1692701782"/>
-    <nd ref="1692701779"/>
-    <nd ref="1692701775"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="fine_gravel"/>
   </way>
   <way id="157034806" version="1" timestamp="2012-03-27T04:07:58Z" uid="215471" user="dragonling" changeset="11112451">
     <nd ref="1692701748"/>
@@ -12010,27 +11629,6 @@
     <nd ref="1726293164"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="162096303" version="1" timestamp="2012-05-04T13:41:25Z" uid="215471" user="dragonling" changeset="11497943">
-    <nd ref="1740301965"/>
-    <nd ref="1740301910"/>
-    <nd ref="1740301903"/>
-    <nd ref="1740301887"/>
-    <nd ref="1740301876"/>
-    <nd ref="1740301877"/>
-    <nd ref="1740301888"/>
-    <nd ref="1740301901"/>
-    <nd ref="1740301940"/>
-    <nd ref="1740301957"/>
-    <nd ref="1740301971"/>
-    <nd ref="1740301984"/>
-    <nd ref="1740301989"/>
-    <nd ref="1740301986"/>
-    <nd ref="1740301979"/>
-    <nd ref="1740301965"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="tartan"/>
-  </way>
   <way id="162096304" version="3" timestamp="2016-08-08T06:36:54Z" uid="1272223" user="Транквилитатор" changeset="41317037">
     <nd ref="1740301982"/>
     <nd ref="392987160"/>
@@ -12052,27 +11650,6 @@
     <nd ref="4340701797"/>
     <nd ref="392987873"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="162096305" version="1" timestamp="2012-05-04T13:41:26Z" uid="215471" user="dragonling" changeset="11497943">
-    <nd ref="1740301830"/>
-    <nd ref="1683114393"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="162096306" version="2" timestamp="2015-04-21T11:22:05Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="1740301792"/>
-    <nd ref="3469286828"/>
-    <nd ref="1740301814"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="162096307" version="3" timestamp="2015-02-13T08:00:44Z" uid="1045498" user="Serj Volkov" changeset="28815068">
-    <nd ref="1740302012"/>
-    <nd ref="3347403158"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="162096309" version="1" timestamp="2012-05-04T13:41:26Z" uid="215471" user="dragonling" changeset="11497943">
-    <nd ref="1740301844"/>
-    <nd ref="392987867"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="162096312" version="1" timestamp="2012-05-04T13:41:26Z" uid="215471" user="dragonling" changeset="11497943">
     <nd ref="1740301766"/>
@@ -12431,14 +12008,6 @@
     <nd ref="1744450306"/>
     <tag k="building" v="yes"/>
   </way>
-  <way id="162582999" version="3" timestamp="2012-06-09T19:05:57Z" uid="215471" user="dragonling" changeset="11848027">
-    <nd ref="1744597142"/>
-    <nd ref="1744597158"/>
-    <nd ref="1744450272"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="fine_gravel"/>
-  </way>
   <way id="162583000" version="3" timestamp="2016-10-25T11:45:49Z" uid="1272223" user="Транквилитатор" changeset="43155919">
     <nd ref="1744450327"/>
     <nd ref="1744450393"/>
@@ -12535,20 +12104,6 @@
     <nd ref="1744596940"/>
     <tag k="highway" v="service"/>
     <tag k="service" v="parking_aisle"/>
-  </way>
-  <way id="162597812" version="4" timestamp="2013-09-22T10:54:10Z" uid="215471" user="dragonling" changeset="17971386">
-    <nd ref="1744596942"/>
-    <nd ref="1745321816"/>
-    <nd ref="1744597009"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="162597813" version="2" timestamp="2016-03-01T10:49:25Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="1744597083"/>
-    <nd ref="4034450720"/>
-    <nd ref="1744597124"/>
-    <tag k="highway" v="footway"/>
-    <tag k="layer" v="-1"/>
   </way>
   <way id="162597814" version="2" timestamp="2013-02-08T10:16:05Z" uid="716329" user="ZHmuTb" changeset="14953347">
     <nd ref="1744597128"/>
@@ -13072,12 +12627,6 @@
     <tag k="foot" v="yes"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="162677841" version="2" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321816"/>
-    <nd ref="1745321824"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="162677846" version="1" timestamp="2012-05-08T10:14:49Z" uid="215471" user="dragonling" changeset="11537474">
     <nd ref="1745321831"/>
     <nd ref="1745321830"/>
@@ -13095,11 +12644,6 @@
     <nd ref="1248462621"/>
     <nd ref="3099864058"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="162677853" version="3" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321803"/>
-    <nd ref="1745321801"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="162677859" version="1" timestamp="2012-05-08T10:14:50Z" uid="215471" user="dragonling" changeset="11537474">
     <nd ref="1745321822"/>
@@ -13176,30 +12720,6 @@
     <nd ref="1745344052"/>
     <nd ref="1745344099"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="162681667" version="1" timestamp="2012-05-08T10:38:12Z" uid="215471" user="dragonling" changeset="11537632">
-    <nd ref="1745344058"/>
-    <nd ref="1745344056"/>
-    <nd ref="1745344042"/>
-    <nd ref="1745344041"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="162681668" version="2" timestamp="2012-05-26T21:33:12Z" uid="215471" user="dragonling" changeset="11710717">
-    <nd ref="1766695073"/>
-    <nd ref="1745344074"/>
-    <nd ref="1745344072"/>
-    <nd ref="1745344061"/>
-    <nd ref="1745344058"/>
-    <nd ref="1745344054"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="162681669" version="1" timestamp="2012-05-08T10:38:12Z" uid="215471" user="dragonling" changeset="11537632">
-    <nd ref="1745344070"/>
-    <nd ref="1745344068"/>
-    <nd ref="1745344065"/>
-    <nd ref="1745344060"/>
-    <nd ref="1745344052"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="162681670" version="1" timestamp="2012-05-08T10:38:12Z" uid="215471" user="dragonling" changeset="11537632">
     <nd ref="1745344093"/>
@@ -13281,43 +12801,6 @@
     <nd ref="1744596883"/>
     <nd ref="1766695240"/>
   </way>
-  <way id="165087634" version="2" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1766695238"/>
-    <nd ref="1766695194"/>
-    <nd ref="1766695190"/>
-    <nd ref="1766695175"/>
-    <nd ref="1766695170"/>
-    <nd ref="1766695167"/>
-    <nd ref="1766695186"/>
-    <nd ref="1766695192"/>
-    <nd ref="1766695231"/>
-    <nd ref="1766695253"/>
-    <nd ref="1766695243"/>
-    <nd ref="1766695249"/>
-    <nd ref="1766695260"/>
-    <nd ref="1766695308"/>
-    <nd ref="1766695327"/>
-    <nd ref="1766695368"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="165087637" version="4" timestamp="2014-12-10T08:52:48Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1766695308"/>
-    <nd ref="1766695297"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="165087639" version="2" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1766695260"/>
-    <nd ref="1766695255"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="165087640" version="1" timestamp="2012-05-26T21:33:04Z" uid="215471" user="dragonling" changeset="11710717">
-    <nd ref="1745344072"/>
-    <nd ref="1766695080"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="165087642" version="3" timestamp="2014-06-10T04:17:13Z" uid="1045498" user="Serj Volkov" changeset="22842021">
     <nd ref="1248462621"/>
     <nd ref="1745321791"/>
@@ -13336,21 +12819,6 @@
     <tag k="highway" v="steps"/>
     <tag k="incline" v="down"/>
   </way>
-  <way id="165087648" version="2" timestamp="2014-06-02T04:30:25Z" uid="1045498" user="Serj Volkov" changeset="22685229">
-    <nd ref="1766695235"/>
-    <nd ref="2894801274"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="165087649" version="2" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321788"/>
-    <nd ref="1766695155"/>
-    <nd ref="1766695167"/>
-    <nd ref="3227796393"/>
-    <nd ref="1766695253"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="pebblestone"/>
-  </way>
   <way id="165087651" version="1" timestamp="2012-05-26T21:33:05Z" uid="215471" user="dragonling" changeset="11710717">
     <nd ref="1766695194"/>
     <nd ref="1766695242"/>
@@ -13362,13 +12830,6 @@
     <nd ref="1766694921"/>
     <nd ref="1766694894"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="165087654" version="3" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="2098187513"/>
-    <nd ref="1766694960"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
   </way>
   <way id="165087656" version="1" timestamp="2012-05-26T21:33:05Z" uid="215471" user="dragonling" changeset="11710717">
     <nd ref="1766695175"/>
@@ -13384,23 +12845,6 @@
     <nd ref="2896847128"/>
     <nd ref="1766694894"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="165087659" version="2" timestamp="2014-06-10T04:17:12Z" uid="1045498" user="Serj Volkov" changeset="22842021">
-    <nd ref="1745321789"/>
-    <nd ref="1745321787"/>
-    <nd ref="1745321788"/>
-    <nd ref="2908428138"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="165087662" version="3" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2098187528"/>
-    <nd ref="2098187447"/>
-    <nd ref="1766694919"/>
-    <nd ref="1766694947"/>
-    <nd ref="1766694960"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="165087663" version="3" timestamp="2014-10-17T12:49:45Z" uid="1272223" user="Транквилитатор" changeset="26143680">
     <nd ref="1766695161"/>
@@ -13420,13 +12864,6 @@
     <nd ref="1766695008"/>
     <nd ref="1766694977"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="165087665" version="2" timestamp="2013-01-06T15:36:01Z" uid="390458" user="Alex5" changeset="14550564">
-    <nd ref="2098210703"/>
-    <nd ref="1766694944"/>
-    <nd ref="1766694939"/>
-    <nd ref="2098210676"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="165087667" version="2" timestamp="2013-01-06T15:21:26Z" uid="390458" user="Alex5" changeset="14550564">
     <nd ref="1766694923"/>
@@ -13915,23 +13352,10 @@
     <tag k="ramp:wheelchair" v="no"/>
     <tag k="surface.material" v="metal"/>
   </way>
-  <way id="166736152" version="1" timestamp="2012-06-09T19:05:43Z" uid="215471" user="dragonling" changeset="11848027">
-    <nd ref="1781833825"/>
-    <nd ref="1781833854"/>
-    <tag k="lit" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="incline" v="up"/>
-  </way>
   <way id="166736154" version="1" timestamp="2012-06-09T19:05:43Z" uid="215471" user="dragonling" changeset="11848027">
     <nd ref="1781833861"/>
     <nd ref="1781833855"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="166736155" version="1" timestamp="2012-06-09T19:05:43Z" uid="215471" user="dragonling" changeset="11848027">
-    <nd ref="1781833838"/>
-    <nd ref="1781833840"/>
-    <nd ref="1781833854"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="166736156" version="2" timestamp="2014-06-02T04:00:31Z" uid="1045498" user="Serj Volkov" changeset="22684956">
     <nd ref="1781833814"/>
@@ -14134,12 +13558,6 @@
     <nd ref="1781833887"/>
     <tag k="natural" v="scrub"/>
   </way>
-  <way id="166964938" version="5" timestamp="2016-03-01T10:49:25Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="2894799632"/>
-    <nd ref="4034450723"/>
-    <nd ref="4034450721"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="166964970" version="3" timestamp="2014-06-02T04:00:30Z" uid="1045498" user="Serj Volkov" changeset="22684956">
     <nd ref="392986244"/>
     <nd ref="2894791178"/>
@@ -14256,26 +13674,10 @@
     <tag k="covered" v="yes"/>
     <tag k="smoking" v="no"/>
   </way>
-  <way id="199821290" version="1" timestamp="2013-01-06T15:21:25Z" uid="390458" user="Alex5" changeset="14550564">
-    <nd ref="2098187516"/>
-    <nd ref="2098187513"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="199821291" version="2" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
     <nd ref="2098187537"/>
     <nd ref="2098187516"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="199821293" version="1" timestamp="2013-01-06T15:21:25Z" uid="390458" user="Alex5" changeset="14550564">
-    <nd ref="2098187513"/>
-    <nd ref="2098187429"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="199821295" version="2" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1766694947"/>
-    <nd ref="2098187513"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="199821297" version="1" timestamp="2013-01-06T15:21:25Z" uid="390458" user="Alex5" changeset="14550564">
     <nd ref="2098187391"/>
@@ -14354,21 +13756,6 @@
     <nd ref="2098196589"/>
     <tag k="barrier" v="fence"/>
   </way>
-  <way id="199823434" version="4" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3135042347"/>
-    <nd ref="2098210685"/>
-    <nd ref="2098210705"/>
-    <nd ref="2098210715"/>
-    <nd ref="2099931503"/>
-    <nd ref="2098210722"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="199823435" version="1" timestamp="2013-01-06T15:36:00Z" uid="390458" user="Alex5" changeset="14550564">
-    <nd ref="1766694921"/>
-    <nd ref="2098210718"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="199823436" version="1" timestamp="2013-01-06T15:36:00Z" uid="390458" user="Alex5" changeset="14550564">
     <nd ref="519976398"/>
     <nd ref="2098210679"/>
@@ -14377,19 +13764,6 @@
     <nd ref="2098210712"/>
     <nd ref="519976064"/>
     <tag k="barrier" v="fence"/>
-  </way>
-  <way id="199823437" version="3" timestamp="2014-12-10T08:52:48Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2098210683"/>
-    <nd ref="2098210715"/>
-    <nd ref="2099931533"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="199823438" version="7" timestamp="2014-10-17T12:49:42Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007342"/>
-    <nd ref="2098210710"/>
-    <nd ref="3135042347"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="199823439" version="1" timestamp="2013-01-06T15:36:00Z" uid="390458" user="Alex5" changeset="14550564">
     <nd ref="2098210681"/>
@@ -14426,22 +13800,6 @@
     <nd ref="2099931560"/>
     <tag k="highway" v="steps"/>
   </way>
-  <way id="200011762" version="2" timestamp="2014-12-10T08:52:49Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2098210722"/>
-    <nd ref="2099931490"/>
-    <nd ref="2099931540"/>
-    <nd ref="2099931537"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="200011763" version="1" timestamp="2013-01-07T15:39:08Z" uid="390458" user="Alex5" changeset="14563804">
-    <nd ref="2099931506"/>
-    <nd ref="2099931539"/>
-    <nd ref="2099931538"/>
-    <nd ref="2099931486"/>
-    <nd ref="2099931518"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="200011766" version="1" timestamp="2013-01-07T15:39:08Z" uid="390458" user="Alex5" changeset="14563804">
     <nd ref="2099931553"/>
     <nd ref="2099931476"/>
@@ -14449,25 +13807,6 @@
     <nd ref="2099931498"/>
     <nd ref="2099931553"/>
     <tag k="landuse" v="grass"/>
-  </way>
-  <way id="200011768" version="8" timestamp="2014-10-17T12:49:42Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007310"/>
-    <nd ref="2099931555"/>
-    <nd ref="2099931536"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="200011769" version="3" timestamp="2014-12-27T18:42:54Z" uid="384084" user="Kostik" changeset="27737379">
-    <nd ref="1773521597"/>
-    <nd ref="2099931540"/>
-    <nd ref="3255563376"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="200011773" version="2" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2099931560"/>
-    <nd ref="2099931503"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="200011774" version="1" timestamp="2013-01-07T15:39:09Z" uid="390458" user="Alex5" changeset="14563804">
     <nd ref="1406758077"/>
@@ -14545,12 +13884,6 @@
     <nd ref="2099931509"/>
     <nd ref="2099931504"/>
     <tag k="natural" v="scrub"/>
-  </way>
-  <way id="200011788" version="1" timestamp="2013-01-07T15:39:09Z" uid="390458" user="Alex5" changeset="14563804">
-    <nd ref="2099931550"/>
-    <nd ref="2099931506"/>
-    <nd ref="2099931556"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="200011789" version="1" timestamp="2013-01-07T15:39:09Z" uid="390458" user="Alex5" changeset="14563804">
     <nd ref="2099931508"/>
@@ -14853,17 +14186,6 @@
     <tag k="highway" v="steps"/>
     <tag k="incline" v="down"/>
   </way>
-  <way id="231805645" version="2" timestamp="2014-10-17T12:49:42Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="2401366766"/>
-    <nd ref="3135017806"/>
-    <nd ref="2401366788"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="231805646" version="2" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007286"/>
-    <nd ref="2401366674"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="231805647" version="1" timestamp="2013-07-30T11:00:11Z" uid="215471" user="dragonling" changeset="17151260">
     <nd ref="392987179"/>
     <nd ref="2401366752"/>
@@ -14874,11 +14196,6 @@
     <nd ref="2401366795"/>
     <nd ref="2401366770"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="231805649" version="1" timestamp="2013-07-30T11:00:11Z" uid="215471" user="dragonling" changeset="17151260">
-    <nd ref="2401366789"/>
-    <nd ref="2401366780"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="231805651" version="1" timestamp="2013-07-30T11:00:12Z" uid="215471" user="dragonling" changeset="17151260">
     <nd ref="2401366787"/>
@@ -14931,19 +14248,6 @@
     <nd ref="2401366702"/>
     <tag k="highway" v="service"/>
     <tag k="living_street" v="yes"/>
-  </way>
-  <way id="231805662" version="7" timestamp="2015-03-19T17:19:07Z" uid="1045498" user="Serj Volkov" changeset="29596739">
-    <nd ref="3405675229"/>
-    <nd ref="3405675230"/>
-    <nd ref="2401365775"/>
-    <nd ref="2401366279"/>
-    <nd ref="2401366743"/>
-    <nd ref="2401366768"/>
-    <nd ref="2401366793"/>
-    <nd ref="2401366796"/>
-    <nd ref="393007431"/>
-    <tag k="footway" v="sidewalk"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="231805663" version="1" timestamp="2013-07-30T11:00:18Z" uid="215471" user="dragonling" changeset="17151260">
     <nd ref="392987497"/>
@@ -15114,20 +14418,6 @@
     <nd ref="2450646527"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="237231714" version="1" timestamp="2013-09-09T13:32:09Z" uid="1045498" user="Serj Volkov" changeset="17750302">
-    <nd ref="2451704331"/>
-    <nd ref="2451704332"/>
-    <nd ref="2451704333"/>
-    <nd ref="2451704334"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="237231715" version="2" timestamp="2014-12-10T08:52:48Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2451704334"/>
-    <nd ref="2451704335"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="237257290" version="2" timestamp="2014-10-17T12:49:44Z" uid="1272223" user="Транквилитатор" changeset="26143680">
     <nd ref="2451890439"/>
     <nd ref="3135041861"/>
@@ -15177,30 +14467,10 @@
     <tag k="highway" v="service"/>
     <tag k="surface" v="asphalt"/>
   </way>
-  <way id="239919854" version="4" timestamp="2014-08-18T07:56:06Z" uid="1045498" user="Serj Volkov" changeset="24825304">
-    <nd ref="1783547239"/>
-    <nd ref="1783547226"/>
-    <nd ref="1783547188"/>
-    <nd ref="1783547061"/>
-    <nd ref="1783547045"/>
-    <nd ref="3024000938"/>
-    <nd ref="1783547005"/>
-    <nd ref="2903155806"/>
-    <nd ref="2925765904"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="paved"/>
-  </way>
   <way id="240656836" version="1" timestamp="2013-10-05T14:58:58Z" uid="1045498" user="Serj Volkov" changeset="18196881">
     <nd ref="2483711133"/>
     <nd ref="2483711136"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="240656837" version="3" timestamp="2014-12-10T08:52:48Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2483711138"/>
-    <nd ref="3227796309"/>
-    <nd ref="1406172328"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="240789094" version="1" timestamp="2013-10-06T10:21:15Z" uid="1679778" user="Scorpion83" changeset="18209784">
     <nd ref="2484844388"/>
@@ -15235,28 +14505,6 @@
     <nd ref="2943102543"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="261135984" version="1" timestamp="2014-02-11T20:38:45Z" uid="1045498" user="Serj Volkov" changeset="20510675">
-    <nd ref="1745321859"/>
-    <nd ref="2667627392"/>
-    <nd ref="2667627393"/>
-    <nd ref="2667627394"/>
-    <nd ref="2667627396"/>
-    <nd ref="2667627395"/>
-    <nd ref="2451704335"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="262626148" version="3" timestamp="2014-10-21T06:30:53Z" uid="1272223" user="Транквилитатор" changeset="26227986">
-    <nd ref="1406172322"/>
-    <nd ref="2925765916"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="263168480" version="5" timestamp="2016-05-22T15:09:35Z" uid="1045498" user="taranarmo" changeset="39489186">
-    <nd ref="4200387429"/>
-    <nd ref="3130902689"/>
-    <nd ref="1740302011"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="265241136" version="2" timestamp="2014-10-17T12:49:43Z" uid="1272223" user="Транквилитатор" changeset="26143680">
     <nd ref="2709077826"/>
     <nd ref="3135042329"/>
@@ -15287,22 +14535,6 @@
     <nd ref="2755504019"/>
     <tag k="highway" v="steps"/>
   </way>
-  <way id="270523239" version="1" timestamp="2014-03-31T05:17:21Z" uid="1045498" user="Serj Volkov" changeset="21412867">
-    <nd ref="2755504018"/>
-    <nd ref="1766695327"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="270523240" version="1" timestamp="2014-03-31T05:17:22Z" uid="1045498" user="Serj Volkov" changeset="21412867">
-    <nd ref="2755504019"/>
-    <nd ref="2755504020"/>
-    <nd ref="2755504017"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="270523241" version="1" timestamp="2014-03-31T05:17:22Z" uid="1045498" user="Serj Volkov" changeset="21412867">
-    <nd ref="2755504020"/>
-    <nd ref="2755504021"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="270523339" version="2" timestamp="2014-10-21T06:30:54Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="2755504737"/>
     <nd ref="2755504738"/>
@@ -15319,95 +14551,11 @@
     <nd ref="1482527595"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="284413677" version="1" timestamp="2014-05-26T12:17:49Z" uid="1045498" user="Serj Volkov" changeset="22561662">
-    <nd ref="2881612524"/>
-    <nd ref="2881612525"/>
-    <nd ref="2881612526"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285843250" version="5" timestamp="2016-03-01T10:49:25Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="2894791174"/>
-    <nd ref="2894799626"/>
-    <nd ref="2894791175"/>
-    <nd ref="2894791176"/>
-    <nd ref="2894791177"/>
-    <nd ref="4034450724"/>
-    <nd ref="2894791178"/>
-    <nd ref="4034450721"/>
-    <nd ref="3227796537"/>
-    <nd ref="2894791179"/>
-    <nd ref="2894801270"/>
-    <nd ref="2894801271"/>
-    <nd ref="2894801272"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285843251" version="1" timestamp="2014-06-02T04:00:29Z" uid="1045498" user="Serj Volkov" changeset="22684956">
-    <nd ref="2894791179"/>
-    <nd ref="1744597086"/>
-    <nd ref="2894791180"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285843252" version="4" timestamp="2016-03-01T10:49:24Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="1783547007"/>
-    <nd ref="2894799632"/>
-    <nd ref="2894799634"/>
-    <nd ref="2894791180"/>
-    <nd ref="2894791181"/>
-    <nd ref="2894791182"/>
-    <nd ref="2894791183"/>
-    <nd ref="2894791184"/>
-    <nd ref="2894799643"/>
-    <nd ref="2908428137"/>
-    <nd ref="2881612524"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285843253" version="2" timestamp="2014-06-02T04:25:26Z" uid="1045498" user="Serj Volkov" changeset="22685188">
-    <nd ref="2881612524"/>
-    <nd ref="1744596942"/>
-    <nd ref="2894791186"/>
-    <nd ref="2894791187"/>
-    <nd ref="2894799642"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="285843885" version="1" timestamp="2014-06-02T04:25:26Z" uid="1045498" user="Serj Volkov" changeset="22685188">
     <nd ref="2894799640"/>
     <nd ref="1248462612"/>
     <tag k="bicycle" v="yes"/>
     <tag k="highway" v="pedestrian"/>
-  </way>
-  <way id="285843886" version="1" timestamp="2014-06-02T04:25:26Z" uid="1045498" user="Serj Volkov" changeset="22685188">
-    <nd ref="2894799638"/>
-    <nd ref="2894799639"/>
-    <nd ref="2894799640"/>
-    <nd ref="1766695368"/>
-    <nd ref="2881612526"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285843890" version="1" timestamp="2014-06-02T04:25:26Z" uid="1045498" user="Serj Volkov" changeset="22685188">
-    <nd ref="2894791184"/>
-    <nd ref="1744597009"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285844152" version="1" timestamp="2014-06-02T04:30:24Z" uid="1045498" user="Serj Volkov" changeset="22685229">
-    <nd ref="2894801274"/>
-    <nd ref="2894801273"/>
-    <tag k="tunnel" v="building_passage"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285844153" version="1" timestamp="2014-06-02T04:30:24Z" uid="1045498" user="Serj Volkov" changeset="22685229">
-    <nd ref="2894801273"/>
-    <nd ref="1766695257"/>
-    <nd ref="1744596894"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="285844154" version="2" timestamp="2014-10-17T12:49:42Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="2894801272"/>
-    <nd ref="1766695235"/>
-    <nd ref="2894801275"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
   </way>
   <way id="286046978" version="5" timestamp="2016-08-11T10:02:35Z" uid="1045498" user="taranarmo" changeset="41385395">
     <nd ref="2915608925"/>
@@ -15449,192 +14597,21 @@
     <nd ref="2896847130"/>
     <tag k="highway" v="path"/>
   </way>
-  <way id="287211560" version="1" timestamp="2014-06-10T04:17:08Z" uid="1045498" user="Serj Volkov" changeset="22842021">
-    <nd ref="2908428131"/>
-    <nd ref="2908428132"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="287211563" version="4" timestamp="2014-12-10T08:52:49Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2893527989"/>
-    <nd ref="2908428144"/>
-    <nd ref="3135042403"/>
-    <nd ref="3135042402"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="287211565" version="2" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042402"/>
-    <nd ref="2908428141"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="288089620" version="5" timestamp="2016-05-31T14:34:47Z" uid="1667745" user="pieni jaakarhu" changeset="39690204">
-    <nd ref="2894801275"/>
-    <nd ref="1468343424"/>
-    <nd ref="2916307139"/>
-    <nd ref="2938709831"/>
-    <nd ref="2452436698"/>
-    <nd ref="4034450713"/>
-    <nd ref="2938709836"/>
-    <nd ref="2938709832"/>
-    <nd ref="2452436701"/>
-    <nd ref="2452436702"/>
-    <nd ref="2894799622"/>
-    <nd ref="2938709837"/>
-    <nd ref="4217495169"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="288089621" version="1" timestamp="2014-06-14T19:01:31Z" uid="1045498" user="Serj Volkov" changeset="22931192">
-    <nd ref="2916307139"/>
-    <nd ref="2916307140"/>
-    <nd ref="2916307141"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="288089623" version="2" timestamp="2014-12-10T08:52:51Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2916307146"/>
-    <nd ref="2916307147"/>
-    <nd ref="2916307148"/>
-    <nd ref="3227796362"/>
-    <nd ref="3227796391"/>
-    <nd ref="3227796423"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="288089624" version="3" timestamp="2014-10-17T12:49:40Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="370948741"/>
-    <nd ref="1692701774"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="288089625" version="1" timestamp="2014-06-14T19:01:31Z" uid="1045498" user="Serj Volkov" changeset="22931192">
-    <nd ref="2916307149"/>
-    <nd ref="1692701782"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="289027228" version="2" timestamp="2014-12-10T08:52:48Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2925765905"/>
-    <nd ref="1745321803"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="paved"/>
-  </way>
-  <way id="289027229" version="2" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="2925765904"/>
-    <nd ref="2925765905"/>
-    <tag k="layer" v="1"/>
-    <tag k="bridge" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="paved"/>
-  </way>
-  <way id="289027230" version="2" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321801"/>
-    <nd ref="1745321794"/>
-    <nd ref="1745321796"/>
-    <nd ref="1745321799"/>
-    <nd ref="3227796439"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="289027231" version="1" timestamp="2014-06-21T10:53:23Z" uid="1045498" user="Serj Volkov" changeset="23059473">
-    <nd ref="2881628886"/>
-    <nd ref="2317998841"/>
-    <nd ref="2925765909"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="289027232" version="7" timestamp="2016-04-03T15:22:01Z" uid="389679" user="AlexxNB" changeset="38268992">
-    <nd ref="2925765909"/>
-    <nd ref="2925765910"/>
-    <nd ref="2925765913"/>
-    <nd ref="2925765911"/>
-    <nd ref="2943102542"/>
-    <nd ref="2452436683"/>
-    <nd ref="3344306344"/>
-    <nd ref="2925765912"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="289027234" version="5" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2915608925"/>
-    <nd ref="3101390904"/>
-    <nd ref="393006775"/>
-    <nd ref="2925765914"/>
-    <nd ref="3227796310"/>
-    <nd ref="2925765915"/>
-    <tag k="lit" v="yes"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="289490987" version="2" timestamp="2014-12-10T08:52:49Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2930479982"/>
-    <nd ref="3227796471"/>
-    <nd ref="2930479983"/>
-    <nd ref="2930479984"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="289490988" version="2" timestamp="2014-12-10T08:52:47Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2930479985"/>
-    <nd ref="2930479986"/>
-    <nd ref="2930479987"/>
-    <nd ref="2930479988"/>
-    <nd ref="2930479989"/>
-    <nd ref="2930479990"/>
-    <nd ref="2930479991"/>
-    <nd ref="2930479992"/>
-    <nd ref="2930479993"/>
-    <nd ref="2930479994"/>
-    <nd ref="2930479995"/>
-    <nd ref="3227796311"/>
-    <nd ref="3227796307"/>
-    <nd ref="3227796301"/>
-    <nd ref="3227796299"/>
-    <nd ref="3227796295"/>
-    <nd ref="3227796292"/>
-    <nd ref="3227796291"/>
-    <nd ref="393007184"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="289490992" version="1" timestamp="2014-06-24T03:38:43Z" uid="1045498" user="Serj Volkov" changeset="23114325">
     <nd ref="2930480001"/>
     <nd ref="1683114429"/>
     <tag k="highway" v="path"/>
-  </way>
-  <way id="290322191" version="2" timestamp="2014-10-17T12:49:42Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007431"/>
-    <nd ref="2938709804"/>
-    <nd ref="393007443"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="290322193" version="1" timestamp="2014-06-29T10:06:22Z" uid="1045498" user="Serj Volkov" changeset="23266285">
-    <nd ref="2938709817"/>
-    <nd ref="2938709818"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="290322194" version="2" timestamp="2014-07-02T06:55:27Z" uid="1045498" user="Serj Volkov" changeset="23534000">
     <nd ref="2938709819"/>
     <nd ref="2938709820"/>
     <tag k="highway" v="steps"/>
   </way>
-  <way id="290322195" version="1" timestamp="2014-06-29T10:06:22Z" uid="1045498" user="Serj Volkov" changeset="23266285">
-    <nd ref="2938709818"/>
-    <nd ref="2938709819"/>
-    <tag k="tunnel" v="building_passage"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="290322196" version="1" timestamp="2014-06-29T10:06:22Z" uid="1045498" user="Serj Volkov" changeset="23266285">
-    <nd ref="2450645570"/>
-    <nd ref="2938709821"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="290322197" version="1" timestamp="2014-06-29T10:06:22Z" uid="1045498" user="Serj Volkov" changeset="23266285">
     <nd ref="2938709822"/>
     <nd ref="2938709823"/>
     <nd ref="2938709824"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="290322198" version="1" timestamp="2014-06-29T10:06:22Z" uid="1045498" user="Serj Volkov" changeset="23266285">
-    <nd ref="2938709809"/>
-    <nd ref="2938709825"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="290322199" version="1" timestamp="2014-06-29T10:06:22Z" uid="1045498" user="Serj Volkov" changeset="23266285">
     <nd ref="2938709827"/>
@@ -15662,18 +14639,6 @@
     <nd ref="2938709828"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="290322202" version="1" timestamp="2014-06-29T10:06:23Z" uid="1045498" user="Serj Volkov" changeset="23266285">
-    <nd ref="2938709835"/>
-    <nd ref="1744597015"/>
-    <nd ref="2938709836"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="290799053" version="1" timestamp="2014-07-02T06:55:27Z" uid="1045498" user="Serj Volkov" changeset="23534000">
-    <nd ref="2943102541"/>
-    <nd ref="2616584979"/>
-    <nd ref="2943102542"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="290799054" version="2" timestamp="2014-10-21T06:30:52Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="2943102543"/>
     <nd ref="3141315422"/>
@@ -15698,11 +14663,6 @@
     <nd ref="370948741"/>
     <tag k="bicycle" v="yes"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="294170873" version="2" timestamp="2014-10-17T12:49:41Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="2977390693"/>
-    <nd ref="370948741"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="307857433" version="1" timestamp="2014-10-15T09:34:14Z" uid="1272223" user="Транквилитатор" changeset="26090546">
     <nd ref="544125130"/>
@@ -15874,64 +14834,6 @@
     <nd ref="393007297"/>
     <nd ref="393007295"/>
   </way>
-  <way id="308216903" version="2" timestamp="2014-12-10T08:52:46Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2908428141"/>
-    <nd ref="2908428140"/>
-    <nd ref="1745321791"/>
-    <nd ref="2908428139"/>
-    <nd ref="393006794"/>
-    <nd ref="2908428146"/>
-    <nd ref="393006795"/>
-    <nd ref="3227796345"/>
-    <nd ref="1766695130"/>
-    <nd ref="2908428138"/>
-    <nd ref="3227796393"/>
-    <nd ref="1766695255"/>
-    <nd ref="1766695297"/>
-    <nd ref="3227796464"/>
-    <nd ref="2881612526"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216904" version="1" timestamp="2014-10-17T12:49:21Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007403"/>
-    <nd ref="2925765907"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216906" version="1" timestamp="2014-10-17T12:49:22Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042335"/>
-    <nd ref="3135042331"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216909" version="1" timestamp="2014-10-17T12:49:22Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007386"/>
-    <nd ref="393007443"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216912" version="1" timestamp="2014-10-17T12:49:22Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007348"/>
-    <nd ref="1766695107"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216915" version="1" timestamp="2014-10-17T12:49:22Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041924"/>
-    <nd ref="393007189"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216916" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042350"/>
-    <nd ref="2098187537"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
   <way id="308216917" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
     <nd ref="1766694960"/>
     <nd ref="1766694925"/>
@@ -15943,13 +14845,6 @@
     <tag k="highway" v="steps"/>
     <tag k="surface" v="concrete"/>
   </way>
-  <way id="308216920" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042341"/>
-    <nd ref="3135042332"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
   <way id="308216923" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
     <nd ref="3135017826"/>
     <nd ref="3135017828"/>
@@ -15958,290 +14853,6 @@
     <tag k="highway" v="steps"/>
     <tag k="surface" v="asphalt"/>
     <tag k="step_count" v="8"/>
-  </way>
-  <way id="308216926" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007296"/>
-    <nd ref="3135017813"/>
-    <nd ref="3135041834"/>
-    <nd ref="3135041838"/>
-    <nd ref="393007294"/>
-    <nd ref="3135041864"/>
-    <nd ref="3135041854"/>
-    <nd ref="3135041852"/>
-    <nd ref="3135041843"/>
-    <nd ref="3135041844"/>
-    <nd ref="3135017827"/>
-    <nd ref="393007276"/>
-    <nd ref="3135017825"/>
-    <nd ref="3135017815"/>
-    <nd ref="2401366778"/>
-    <nd ref="393007289"/>
-    <nd ref="3135017796"/>
-    <nd ref="393007286"/>
-    <nd ref="393007287"/>
-    <nd ref="393007284"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216927" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007299"/>
-    <nd ref="2098187360"/>
-    <nd ref="393007403"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216928" version="2" timestamp="2014-12-10T08:52:51Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="393007172"/>
-    <nd ref="2930479981"/>
-    <nd ref="3227796423"/>
-    <nd ref="3227796462"/>
-    <nd ref="3227796473"/>
-    <nd ref="2930479982"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216929" version="1" timestamp="2014-10-17T12:49:23Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="1766695107"/>
-    <nd ref="2938709830"/>
-    <nd ref="2894801275"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216930" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042337"/>
-    <nd ref="3135042341"/>
-    <nd ref="3135042343"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216933" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041879"/>
-    <nd ref="3135041880"/>
-    <nd ref="393007393"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216934" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041868"/>
-    <nd ref="3135041866"/>
-    <nd ref="3135041864"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216935" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041881"/>
-    <nd ref="2938709807"/>
-    <nd ref="393007386"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216936" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="1766695087"/>
-    <nd ref="2098210706"/>
-    <nd ref="393007167"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216937" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042333"/>
-    <nd ref="3135042331"/>
-    <nd ref="1406758088"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216938" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041916"/>
-    <nd ref="3135041918"/>
-    <nd ref="393007311"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216940" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007169"/>
-    <nd ref="3135041926"/>
-    <nd ref="3135041924"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216941" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135017827"/>
-    <nd ref="3135041831"/>
-    <nd ref="393007443"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216942" version="1" timestamp="2014-10-17T12:49:24Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007189"/>
-    <nd ref="3135041919"/>
-    <nd ref="393007314"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216945" version="1" timestamp="2014-10-17T12:49:25Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041925"/>
-    <nd ref="3135041927"/>
-    <nd ref="3135041928"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216948" version="1" timestamp="2014-10-17T12:49:25Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="1406758089"/>
-    <nd ref="3135042334"/>
-    <nd ref="1406758093"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216950" version="1" timestamp="2014-10-17T12:49:25Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007348"/>
-    <nd ref="2098210690"/>
-    <nd ref="393007305"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216953" version="1" timestamp="2014-10-17T12:49:25Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007169"/>
-    <nd ref="3135042338"/>
-    <nd ref="393007192"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216957" version="1" timestamp="2014-10-17T12:49:25Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041911"/>
-    <nd ref="3135041913"/>
-    <nd ref="2099933278"/>
-    <nd ref="3135042332"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216960" version="1" timestamp="2014-10-17T12:49:26Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007296"/>
-    <nd ref="392987838"/>
-    <nd ref="3135017807"/>
-    <nd ref="3135017820"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216962" version="1" timestamp="2014-10-17T12:49:26Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="1766695105"/>
-    <nd ref="3135042386"/>
-    <nd ref="393007349"/>
-    <nd ref="2894801275"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216963" version="1" timestamp="2014-10-17T12:49:26Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="1773521640"/>
-    <nd ref="2099931513"/>
-    <nd ref="3135041911"/>
-    <nd ref="1406758084"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216964" version="1" timestamp="2014-10-17T12:49:26Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135017825"/>
-    <nd ref="2317888614"/>
-    <nd ref="2317888612"/>
-    <nd ref="2401366793"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216966" version="1" timestamp="2014-10-17T12:49:26Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007401"/>
-    <nd ref="393007399"/>
-    <nd ref="393007400"/>
-    <nd ref="3135041914"/>
-    <nd ref="393007397"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216974" version="1" timestamp="2014-10-17T12:49:27Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007296"/>
-    <nd ref="3135017808"/>
-    <nd ref="3135017806"/>
-    <nd ref="3135017801"/>
-    <nd ref="3135017802"/>
-    <nd ref="3135017804"/>
-    <nd ref="2401366771"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216975" version="1" timestamp="2014-10-17T12:49:27Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135042339"/>
-    <nd ref="3135042340"/>
-    <nd ref="3135042337"/>
-    <nd ref="3135042335"/>
-    <nd ref="3135042333"/>
-    <nd ref="3135042332"/>
-    <nd ref="3135042330"/>
-    <nd ref="2099933276"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="ground"/>
-  </way>
-  <way id="308216976" version="3" timestamp="2015-04-21T11:22:05Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="393007294"/>
-    <nd ref="3135041867"/>
-    <nd ref="3135041869"/>
-    <nd ref="3135041887"/>
-    <nd ref="3135041845"/>
-    <nd ref="3469286825"/>
-    <nd ref="3135041833"/>
-    <nd ref="392987864"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="308216977" version="1" timestamp="2014-10-17T12:49:27Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="393007310"/>
-    <nd ref="3135041904"/>
-    <nd ref="2099931537"/>
-    <nd ref="3135041907"/>
-    <nd ref="3135041906"/>
-    <nd ref="3135041910"/>
-    <nd ref="3135041912"/>
-    <nd ref="393007311"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216979" version="3" timestamp="2015-06-18T10:19:45Z" uid="1045498" user="Serj Volkov" changeset="32047677">
-    <nd ref="393007386"/>
-    <nd ref="3135041877"/>
-    <nd ref="393007439"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308216981" version="1" timestamp="2014-10-17T12:49:27Z" uid="1272223" user="Транквилитатор" changeset="26143680">
-    <nd ref="3135041916"/>
-    <nd ref="3135041908"/>
-    <nd ref="393007325"/>
-    <nd ref="3135041896"/>
-    <nd ref="3135041875"/>
-    <nd ref="393007320"/>
-    <nd ref="393007303"/>
-    <nd ref="3135041909"/>
-    <nd ref="393007314"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
   </way>
   <way id="308837994" version="1" timestamp="2014-10-21T06:30:36Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="3141315411"/>
@@ -16292,21 +14903,6 @@
     <tag k="name:en" v="Krasnaya street"/>
     <tag k="surface" v="unpaved"/>
   </way>
-  <way id="308838065" version="2" timestamp="2016-10-25T12:53:58Z" uid="1272223" user="Транквилитатор" changeset="43157365">
-    <nd ref="3141315391"/>
-    <nd ref="3141315392"/>
-    <tag k="highway" v="footway"/>
-    <tag k="lit" v="no"/>
-    <tag k="surface" v="asphalt"/>
-    <tag k="tunnel" v="building_passage"/>
-  </way>
-  <way id="308838071" version="2" timestamp="2016-10-25T12:53:58Z" uid="1272223" user="Транквилитатор" changeset="43157365">
-    <nd ref="3141315390"/>
-    <nd ref="3141315391"/>
-    <tag k="highway" v="footway"/>
-    <tag k="lit" v="no"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
   <way id="308838073" version="1" timestamp="2014-10-21T06:30:41Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="2939069438"/>
     <nd ref="1406758066"/>
@@ -16318,35 +14914,16 @@
     <tag k="highway" v="service"/>
     <tag k="surface" v="asphalt"/>
   </way>
-  <way id="308838076" version="2" timestamp="2016-10-25T12:53:58Z" uid="1272223" user="Транквилитатор" changeset="43157365">
-    <nd ref="3141315392"/>
-    <nd ref="3141315393"/>
-    <tag k="highway" v="footway"/>
-    <tag k="lit" v="no"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
   <way id="308838077" version="1" timestamp="2014-10-21T06:30:41Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="3141315422"/>
     <nd ref="610860362"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="308838080" version="1" timestamp="2014-10-21T06:30:41Z" uid="1272223" user="Транквилитатор" changeset="26227986">
-    <nd ref="2925765916"/>
-    <nd ref="3141315390"/>
-    <nd ref="2925765909"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="308838084" version="1" timestamp="2014-10-21T06:30:42Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="3141315536"/>
     <nd ref="2755504740"/>
     <nd ref="2504036970"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="308838090" version="1" timestamp="2014-10-21T06:30:42Z" uid="1272223" user="Транквилитатор" changeset="26227986">
-    <nd ref="2925765915"/>
-    <nd ref="1891303185"/>
-    <nd ref="2925765916"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="308838097" version="1" timestamp="2014-10-21T06:30:43Z" uid="1272223" user="Транквилитатор" changeset="26227986">
     <nd ref="2943102543"/>
@@ -16361,20 +14938,6 @@
     <nd ref="610860365"/>
     <tag k="highway" v="service"/>
     <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="308838108" version="2" timestamp="2016-01-12T20:36:53Z" uid="389679" user="AlexxNB" changeset="36537752">
-    <nd ref="3141315352"/>
-    <nd ref="3141315355"/>
-    <nd ref="2939069432"/>
-    <nd ref="3942389924"/>
-    <nd ref="611029665"/>
-    <nd ref="2939069433"/>
-    <nd ref="3141314114"/>
-    <nd ref="2939069434"/>
-    <nd ref="2939069435"/>
-    <nd ref="393007397"/>
-    <tag k="highway" v="footway"/>
-    <tag k="motor_vehicle" v="yes"/>
   </way>
   <way id="310844898" version="2" timestamp="2014-12-10T08:52:50Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3163376335"/>
@@ -16520,49 +15083,11 @@
     <tag k="name:en" v="Studencheskiy boulevard"/>
     <tag k="surface" v="cobblestone"/>
   </way>
-  <way id="316635899" version="2" timestamp="2016-01-19T21:14:09Z" uid="316868" user="LexIgnatov" changeset="36688798">
-    <nd ref="3227796484"/>
-    <nd ref="3227796467"/>
-    <nd ref="3227796448"/>
-    <nd ref="3227796395"/>
-    <nd ref="3227796379"/>
-    <nd ref="3227796370"/>
-    <nd ref="3227796371"/>
-    <nd ref="3227796381"/>
-    <nd ref="3227796382"/>
-    <nd ref="3227796387"/>
-    <nd ref="3227796385"/>
-    <nd ref="3227796378"/>
-    <nd ref="3227796363"/>
-    <nd ref="3227796343"/>
-    <nd ref="3227796341"/>
-    <nd ref="3227796342"/>
-    <nd ref="3227796347"/>
-    <nd ref="393009202"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635900" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796313"/>
-    <nd ref="3227796315"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635901" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796462"/>
-    <nd ref="3227796437"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="316635902" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3227796565"/>
     <nd ref="1781833866"/>
     <tag k="layer" v="-1"/>
     <tag k="highway" v="service"/>
-  </way>
-  <way id="316635903" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2925765912"/>
-    <nd ref="2925765907"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="316635904" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3227796406"/>
@@ -16575,97 +15100,12 @@
     <tag k="tunnel" v="building_passage"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="316635907" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796408"/>
-    <nd ref="3227796395"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="316635908" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796391"/>
-    <nd ref="3227796394"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="paving_stones"/>
-  </way>
   <way id="316635909" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3227796345"/>
     <nd ref="3227796348"/>
     <tag k="highway" v="steps"/>
     <tag k="surface" v="concrete"/>
     <tag k="step_count" v="10"/>
-  </way>
-  <way id="316635910" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1766695135"/>
-    <nd ref="3227796348"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="316635911" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796458"/>
-    <nd ref="3227796408"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="316635912" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796298"/>
-    <nd ref="3227796300"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635913" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321801"/>
-    <nd ref="1745321793"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635916" version="1" timestamp="2014-12-10T08:52:34Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1745321793"/>
-    <nd ref="3227796388"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635917" version="2" timestamp="2015-02-13T08:00:44Z" uid="1045498" user="Serj Volkov" changeset="28815068">
-    <nd ref="3227796289"/>
-    <nd ref="2908428133"/>
-    <nd ref="3227796284"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635918" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2925765912"/>
-    <nd ref="2452436685"/>
-    <nd ref="2098210717"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635919" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796388"/>
-    <nd ref="393006778"/>
-    <nd ref="3227796352"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635920" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796421"/>
-    <nd ref="3227796401"/>
-    <nd ref="1406172352"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635921" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796352"/>
-    <nd ref="2925765906"/>
-    <nd ref="2925765912"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635922" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796321"/>
-    <nd ref="3227796322"/>
-    <nd ref="3227796325"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635923" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796473"/>
-    <nd ref="3227796475"/>
-    <nd ref="3227796465"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="316635924" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3227796309"/>
@@ -16680,53 +15120,6 @@
     <tag k="snowmobile" v="no"/>
     <tag k="wheelchair" v="no"/>
   </way>
-  <way id="316635926" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796400"/>
-    <nd ref="3227796410"/>
-    <nd ref="3227796408"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="paving_stones"/>
-  </way>
-  <way id="316635929" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796464"/>
-    <nd ref="3227796451"/>
-    <nd ref="393007306"/>
-    <tag k="lit" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635930" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="2916307146"/>
-    <nd ref="3227796296"/>
-    <nd ref="3227796294"/>
-    <nd ref="3227796292"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635931" version="1" timestamp="2014-12-10T08:52:35Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796389"/>
-    <nd ref="3227796399"/>
-    <nd ref="3227796400"/>
-    <nd ref="3227796379"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635933" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796316"/>
-    <nd ref="3227796321"/>
-    <nd ref="3227796323"/>
-    <nd ref="3227796326"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635934" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="3227796471"/>
-    <nd ref="3227796465"/>
-    <nd ref="3227796437"/>
-    <nd ref="3227796406"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="cobblestone"/>
-  </way>
   <way id="316635935" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3227796439"/>
     <nd ref="3227796454"/>
@@ -16740,64 +15133,6 @@
     <tag k="snowmobile" v="no"/>
     <tag k="wheelchair" v="yes"/>
     <tag k="trail_visibility" v="excellent"/>
-  </way>
-  <way id="316635936" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="393007306"/>
-    <nd ref="3227796442"/>
-    <nd ref="2894801272"/>
-    <nd ref="3227796468"/>
-    <nd ref="2881612524"/>
-    <tag k="lit" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635937" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="393007187"/>
-    <nd ref="3227796277"/>
-    <nd ref="393007303"/>
-    <nd ref="3227796274"/>
-    <nd ref="3135041887"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635938" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
-    <nd ref="1740302012"/>
-    <nd ref="3227796287"/>
-    <nd ref="3227796293"/>
-    <nd ref="3227796290"/>
-    <nd ref="3130902718"/>
-    <nd ref="2908428132"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635939" version="2" timestamp="2016-03-01T10:49:26Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="2930479982"/>
-    <nd ref="3227796492"/>
-    <nd ref="3227796494"/>
-    <nd ref="4034450714"/>
-    <nd ref="3227796505"/>
-    <nd ref="2938709835"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="316635940" version="3" timestamp="2015-04-21T11:22:04Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="3135041887"/>
-    <nd ref="3227796271"/>
-    <nd ref="3227796275"/>
-    <nd ref="3227796278"/>
-    <nd ref="3227796281"/>
-    <nd ref="3469286843"/>
-    <nd ref="3227796284"/>
-    <nd ref="3227796286"/>
-    <nd ref="3227796288"/>
-    <nd ref="2908428132"/>
-    <nd ref="2930480002"/>
-    <nd ref="2930480001"/>
-    <nd ref="2930480000"/>
-    <nd ref="1676738929"/>
-    <nd ref="2930479999"/>
-    <nd ref="2930479998"/>
-    <nd ref="2930479997"/>
-    <nd ref="1683114453"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="316635941" version="1" timestamp="2014-12-10T08:52:36Z" uid="1272223" user="Транквилитатор" changeset="27372361">
     <nd ref="3227796439"/>
@@ -16823,19 +15158,6 @@
     <nd ref="1766695116"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="316635944" version="2" timestamp="2016-03-01T10:49:27Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="3227796505"/>
-    <nd ref="3227796500"/>
-    <nd ref="4034450712"/>
-    <nd ref="3227796495"/>
-    <nd ref="3227796486"/>
-    <nd ref="3227796484"/>
-    <nd ref="3227796458"/>
-    <nd ref="3227796448"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-    <tag k="surface" v="asphalt"/>
-  </way>
   <way id="321334141" version="1" timestamp="2015-01-10T17:50:24Z" uid="1045498" user="Serj Volkov" changeset="28045833">
     <nd ref="3280755463"/>
     <nd ref="3280755464"/>
@@ -16852,43 +15174,10 @@
     <nd ref="3280755314"/>
     <tag k="landuse" v="construction"/>
   </way>
-  <way id="327624106" version="2" timestamp="2016-04-03T15:22:01Z" uid="389679" user="AlexxNB" changeset="38268992">
-    <nd ref="2504036969"/>
-    <nd ref="4095556179"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="327624107" version="2" timestamp="2016-04-03T15:22:01Z" uid="389679" user="AlexxNB" changeset="38268992">
-    <nd ref="4095556179"/>
-    <nd ref="4095556175"/>
-    <tag k="highway" v="footway"/>
-    <tag k="tunnel" v="building_passage"/>
-  </way>
-  <way id="327624108" version="2" timestamp="2016-04-03T15:22:01Z" uid="389679" user="AlexxNB" changeset="38268992">
-    <nd ref="4095556175"/>
-    <nd ref="3344306344"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="327924198" version="1" timestamp="2015-02-13T08:00:42Z" uid="1045498" user="Serj Volkov" changeset="28815068">
     <nd ref="3347403158"/>
     <nd ref="1740302011"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="327924199" version="2" timestamp="2015-04-21T11:22:04Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="3227796286"/>
-    <nd ref="3227796283"/>
-    <nd ref="3227796282"/>
-    <nd ref="3227796279"/>
-    <nd ref="3469286831"/>
-    <nd ref="3227796266"/>
-    <nd ref="3227796265"/>
-    <nd ref="3227796263"/>
-    <nd ref="1469154416"/>
-    <nd ref="3227796275"/>
-    <nd ref="3227796276"/>
-    <nd ref="393007187"/>
-    <tag k="lit" v="yes"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="328911170" version="1" timestamp="2015-02-18T07:50:53Z" uid="1045498" user="Serj Volkov" changeset="28926289">
     <nd ref="519975938"/>
@@ -17023,26 +15312,11 @@
     <nd ref="3469286823"/>
     <tag k="highway" v="steps"/>
   </way>
-  <way id="339724341" version="1" timestamp="2015-04-21T11:22:02Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="3469286825"/>
-    <nd ref="3469286824"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="339724342" version="1" timestamp="2015-04-21T11:22:02Z" uid="1272223" user="Транквилитатор" changeset="30375998">
     <nd ref="3469286840"/>
     <nd ref="3469286847"/>
     <nd ref="3469286854"/>
     <tag k="highway" v="living_street"/>
-  </way>
-  <way id="339724344" version="1" timestamp="2015-04-21T11:22:03Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="392987864"/>
-    <nd ref="3469286822"/>
-    <nd ref="3469286828"/>
-    <nd ref="3469286829"/>
-    <nd ref="3227796263"/>
-    <tag k="lit" v="yes"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="339724345" version="1" timestamp="2015-04-21T11:22:03Z" uid="1272223" user="Транквилитатор" changeset="30375998">
     <nd ref="3469286845"/>
@@ -17087,18 +15361,6 @@
     <nd ref="1740301724"/>
     <tag k="highway" v="service"/>
   </way>
-  <way id="339724350" version="1" timestamp="2015-04-21T11:22:03Z" uid="1272223" user="Транквилитатор" changeset="30375998">
-    <nd ref="3469286831"/>
-    <nd ref="3469286836"/>
-    <nd ref="3469286835"/>
-    <nd ref="3469286839"/>
-    <nd ref="3469286833"/>
-    <nd ref="3469286832"/>
-    <nd ref="3469286830"/>
-    <nd ref="1469154416"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="339724352" version="1" timestamp="2015-04-21T11:22:03Z" uid="1272223" user="Транквилитатор" changeset="30375998">
     <nd ref="3469286855"/>
     <nd ref="3469286850"/>
@@ -17114,11 +15376,6 @@
     <nd ref="3554921584"/>
     <nd ref="3554921585"/>
     <tag k="barrier" v="block"/>
-  </way>
-  <way id="349641844" version="2" timestamp="2015-06-04T16:39:33Z" uid="384084" user="Kostik" changeset="31724039">
-    <nd ref="3554928756"/>
-    <nd ref="2709091969"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="349641845" version="2" timestamp="2015-06-04T16:39:33Z" uid="384084" user="Kostik" changeset="31724039">
     <nd ref="2504019189"/>
@@ -17205,21 +15462,6 @@
     <tag k="service" v="parking_aisle"/>
     <tag k="smoothness" v="excellent"/>
     <tag k="surface" v="asphalt"/>
-  </way>
-  <way id="400958607" version="1" timestamp="2016-03-01T10:49:20Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="4034450724"/>
-    <nd ref="4034450720"/>
-    <nd ref="4034450717"/>
-    <nd ref="4034450713"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="400958609" version="1" timestamp="2016-03-01T10:49:20Z" uid="1272223" user="Транквилитатор" changeset="37539990">
-    <nd ref="2894799628"/>
-    <nd ref="2894799629"/>
-    <nd ref="2894799630"/>
-    <nd ref="2894799631"/>
-    <nd ref="2894799632"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="400958611" version="1" timestamp="2016-03-01T10:49:20Z" uid="1272223" user="Транквилитатор" changeset="37539990">
     <nd ref="4034450708"/>
@@ -17831,30 +16073,10 @@
     <tag k="roof:material" v="metal"/>
     <tag k="roof:shape" v="gabled"/>
   </way>
-  <way id="408806026" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
-    <nd ref="4107150982"/>
-    <nd ref="4107150981"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="408806027" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
-    <nd ref="4107150991"/>
-    <nd ref="4107150990"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="408806028" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
     <nd ref="4107150990"/>
     <nd ref="4107150989"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="408806029" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
-    <nd ref="4107150983"/>
-    <nd ref="4107150984"/>
-    <tag k="highway" v="footway"/>
-  </way>
-  <way id="408806030" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
-    <nd ref="4107150987"/>
-    <nd ref="4107150988"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="408806031" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
     <nd ref="4107150986"/>
@@ -17865,11 +16087,6 @@
     <nd ref="4107150984"/>
     <nd ref="4107150985"/>
     <tag k="highway" v="steps"/>
-  </way>
-  <way id="408806033" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
-    <nd ref="4107150992"/>
-    <nd ref="420856891"/>
-    <tag k="highway" v="footway"/>
   </way>
   <way id="408806034" version="1" timestamp="2016-04-08T07:24:35Z" uid="1272223" user="Транквилитатор" changeset="38398853">
     <nd ref="4107150981"/>
@@ -17883,12 +16100,6 @@
     <nd ref="521796514"/>
     <tag k="barrier" v="fence"/>
   </way>
-  <way id="420052930" version="1" timestamp="2016-05-22T15:09:34Z" uid="1045498" user="taranarmo" changeset="39489186">
-    <nd ref="1335828041"/>
-    <nd ref="4200387430"/>
-    <tag k="bicycle" v="yes"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="420052932" version="1" timestamp="2016-05-22T15:09:34Z" uid="1045498" user="taranarmo" changeset="39489186">
     <nd ref="4200387430"/>
     <nd ref="4200387429"/>
@@ -17896,30 +16107,11 @@
     <tag k="highway" v="steps"/>
     <tag k="ramp:wheelchair" v="3"/>
   </way>
-  <way id="427677330" version="1" timestamp="2016-06-27T20:01:08Z" uid="1272223" user="Транквилитатор" changeset="40329554">
-    <nd ref="2938709835"/>
-    <nd ref="2938709834"/>
-    <nd ref="2938709833"/>
-    <nd ref="393007357"/>
-    <tag k="highway" v="footway"/>
-  </way>
   <way id="449361185" version="1" timestamp="2016-10-25T11:45:45Z" uid="1272223" user="Транквилитатор" changeset="43155919">
     <nd ref="4463260946"/>
     <nd ref="4463260943"/>
     <nd ref="4463260933"/>
     <tag k="barrier" v="fence"/>
-  </way>
-  <way id="449361188" version="1" timestamp="2016-10-25T11:45:45Z" uid="1272223" user="Транквилитатор" changeset="43155919">
-    <nd ref="4463260928"/>
-    <nd ref="4463260934"/>
-    <tag k="highway" v="footway"/>
-    <tag k="tunnel" v="building_passage"/>
-  </way>
-  <way id="449361196" version="1" timestamp="2016-10-25T11:45:46Z" uid="1272223" user="Транквилитатор" changeset="43155919">
-    <nd ref="1744450406"/>
-    <nd ref="4463260927"/>
-    <nd ref="4463260928"/>
-    <tag k="highway" v="footway"/>
   </way>
   <relation id="447590" version="10" timestamp="2014-10-25T19:37:42Z" uid="519501" user="parukhin" changeset="26328755">
     <member type="way" ref="113856709" role="inner"/>
