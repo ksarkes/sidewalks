@@ -118,8 +118,8 @@ public class GeoUtil {
         Point newEndXY = new Point(p2.x + orth.x, p2.y + orth.y);
 
         double angle = angle(toLatLng(newStartXY), lineStart);
-        LatLng newStart = movePoint(lineStart, 30, angle);
-        LatLng newEnd = movePoint(lineEnd, 30, angle);
+        LatLng newStart = movePoint(lineStart, 3, angle);
+        LatLng newEnd = movePoint(lineEnd, 3, angle);
         return new Pair<>(newStart, newEnd);
     }
 }

@@ -7,11 +7,8 @@ import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
 import org.openstreetmap.osmosis.core.container.v0_6.RelationContainer;
 import org.openstreetmap.osmosis.core.container.v0_6.WayContainer;
 import org.openstreetmap.osmosis.core.task.v0_6.Sink;
-import org.openstreetmap.osmosis.xml.common.CompressionMethod;
-import org.openstreetmap.osmosis.xml.v0_6.XmlWriter;
 import org.openstreetmap.osmosis.xml.v0_6.impl.FastXmlParser;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,22 +38,22 @@ public class Main {
                 entityContainer.process(new EntityProcessor() {
                     @Override
                     public void process(BoundContainer bound) {
-                        processor.addBoundContainer(bound);
+                        processor.addBound(bound);
                     }
 
                     @Override
                     public void process(NodeContainer node) {
-                        processor.addNodeContainer(node);
+                        processor.addNode(node);
                     }
 
                     @Override
                     public void process(WayContainer way) {
-                        processor.addWayContainer(way);
+                        processor.addWay(way);
                     }
 
                     @Override
                     public void process(RelationContainer relation) {
-                        processor.addRelationContainer(relation);
+                        processor.addRelation(relation);
                     }
                 });
             }
