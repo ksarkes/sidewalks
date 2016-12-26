@@ -25,7 +25,8 @@ import javax.xml.stream.XMLStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException, XMLStreamException
     {
-        InputStream input = new FileInputStream("ptz.osm_02.osm");
+//        InputStream input = new FileInputStream("ptz.osm_02.osm");
+        InputStream input = new FileInputStream("map2.osm");
 
         XMLInputFactory factory = XMLInputFactory.newInstance();
         // configure it to create readers that coalesce adjacent character sections

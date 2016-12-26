@@ -5,14 +5,15 @@ import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
 import org.openstreetmap.osmosis.core.container.v0_6.RelationContainer;
 import org.openstreetmap.osmosis.core.container.v0_6.WayContainer;
 import org.openstreetmap.osmosis.core.domain.v0_6.Tag;
+import org.openstreetmap.osmosis.core.domain.v0_6.WayNode;
 import org.openstreetmap.osmosis.xml.common.CompressionMethod;
 import org.openstreetmap.osmosis.xml.v0_6.XmlWriter;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-import javafx.util.Pair;
 
 /**
  * Created by Andrey on 23.12.2016.
@@ -24,8 +25,14 @@ public class SidewalkProcessor {
     private ArrayList<NodeContainer> nodes = new ArrayList<>();
     private ArrayList<WayContainer> ways = new ArrayList<>();
     private ArrayList<RelationContainer> relations = new ArrayList<>();
+    private ArrayList<WayContainer> sidewalks = new ArrayList<>();
 
+    // For getting node by its id in WayNode
     private HashMap<Long, NodeContainer> nodesMap = new HashMap<>();
+    // For getting way related to specified node id
+    private HashMap<Long, ArrayList<Long>> waysMap = new HashMap<>();
+    // For getting node`s adjacent nodes
+    private HashMap<Long, ArrayList<Long>> adjacentNodes = new HashMap<>();
 
     public SidewalkProcessor() {
     }
@@ -36,11 +43,35 @@ public class SidewalkProcessor {
 
     public void addNode(NodeContainer nodeContainer) {
         nodes.add(nodeContainer);
-        nodesMap.put(nodeContainer.getEntity().getId(), nodeContainer);
+        long id = nodeContainer.getEntity().getId();
+        nodesMap.put(id, nodeContainer);
     }
 
     public void addWay(WayContainer wayContainer) {
         ways.add(wayContainer);
+        List<WayNode> wayNodes = wayContainer.getEntity().getWayNodes();
+        for (int i = 0; i < wayNodes.size(); i++) {
+            WayNode wayNode = wayNodes.get(i);
+            long nodeId = wayNode.getNodeId();
+            if (waysMap.get(nodeId) == null) {
+                ArrayList<Long> waysArray = new ArrayList<>();
+                waysArray.add(wayContainer.getEntity().getId());
+                waysMap.put(nodeId, waysArray);
+//                ArrayList<Long> adjacents = new ArrayList<>();
+//                adjacents.add(id);
+//                adjacentNodes.put(id, adjacents);
+            } else {
+                waysMap.get(nodeId).add(wayContainer.getEntity().getId());
+//                if (i > 0) {
+//                    long prevAdj = wayNodes.get(i - 1).getNodeId();
+//                    adjacentNodes.get(nodeId).add(prevAdj);
+//                }
+//                if (i < wayNodes.size() - 2) {
+//                    long nextAdj = wayNodes.get(i + 1).getNodeId();
+//                    adjacentNodes.get(nodeId).add(nextAdj);
+//                }
+            }
+        }
     }
 
     public void addRelation(RelationContainer relationContainer) {
@@ -56,7 +87,7 @@ public class SidewalkProcessor {
         log(180 + (GeoUtil.angle(new LatLng( 61.7849636, 34.352475), new LatLng(61.7860385, 34.3509031))/ Math.PI * 180));*/
 
         ArrayList<WayContainer> containers = new ArrayList<>();
-        ArrayList<WayContainer> sidewalks = new ArrayList<>();
+         sidewalks = new ArrayList<>();
         for (WayContainer way : ways) {
             Long id = way.getEntity().getWayNodes().get(0).getNodeId();
             boolean hasFootway = false;
@@ -65,30 +96,38 @@ public class SidewalkProcessor {
                 if (tag.getKey().equals("highway") && tag.getValue().equals("footway")) {
                     hasFootway = true;
                 }
-                if (tag.getKey().equals("sidewalk")) {
+                if (tag.getKey().equals("sidewalk") && !tag.getValue().equals("none") && !tag.getValue().equals("no")) {
+//                if (tag.getKey().equals("sidewalk") && (tag.getValue().equals("right") || tag.getValue().equals("left"))) {
+//                    log(tag.getValue());
                     hasSidewalk = true;
                 }
             }
             if (!hasFootway)
                 containers.add(way);
-            if (hasSidewalk)
+            if (hasSidewalk) {
                 sidewalks.add(way);
+            }
         }
         ways = containers;
 
-        for (NodeContainer node : nodes) {
-            LatLng latLng = new LatLng(node.getEntity().getLatitude(), node.getEntity().getLongitude());
-//            log(GeoUtil.toMerkator(latLng).toString() + "    " + latLng.toString());
-        }
-/*        for (WayContainer way : ways) {
-            for (Tag tag : way.getEntity().getTags())
-                if (tag.getKey().equals("sidewalk")) {
-                    way.getEntity().get()
-                }
-        }*/
+        for (WayContainer way : ways) {
 
+        }
+
+        for (WayContainer way : sidewalks) {
+            for (WayNode wayNode : way.getEntity().getWayNodes()) {
+                NodeContainer node = nodesMap.get(wayNode.getNodeId());
+                if (isCrossroad(node))
+                    log("wow");
+            }
+        }
         writeOsmXml();
+        writeSidiewalks();
     }
+    private boolean isCrossroad(NodeContainer node) {
+        return waysMap.get(node.getEntity().getId()).size() > 1;
+    }
+
 
     private void writeOsmXml() {
         XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
@@ -101,6 +140,26 @@ public class SidewalkProcessor {
             xmlWriter.process(way);
         for (RelationContainer relation : relations)
             xmlWriter.process(relation);
+
+        xmlWriter.complete();
+        xmlWriter.release();
+    }
+
+    private void writeSidiewalks()  {
+        XmlWriter xmlWriter = new XmlWriter(new File("sidewalks2.osm"), CompressionMethod.None);
+
+//        for (BoundContainer bound : bounds)
+//            xmlWriter.process(bound);
+
+//        for (NodeContainer node : nodes)
+//            xmlWriter.process(node);
+
+        for (WayContainer way : sidewalks) {
+            xmlWriter.process(way);
+        }
+
+//        for (RelationContainer relation : relations)
+//            xmlWriter.process(relation);
 
         xmlWriter.complete();
         xmlWriter.release();
