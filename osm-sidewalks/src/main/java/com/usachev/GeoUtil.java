@@ -1,6 +1,8 @@
 package com.usachev;
 
 
+import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
+
 import javafx.util.Pair;
 
 
@@ -12,6 +14,10 @@ public class GeoUtil {
     private static final double EARTH_RADIUS = 6371000;
     private static final double RADIANS = Math.PI / 180;
     private static final double DEGREES = 180 / Math.PI;
+
+    public static Point toMerkator(NodeContainer nodeContainer) {
+        return toMerkator(new LatLng(nodeContainer.getEntity().getLatitude(), nodeContainer.getEntity().getLongitude()));
+    }
 
     public static Point toMerkator(LatLng point) {
         // lng as lambda, lat as phi
@@ -57,6 +63,11 @@ public class GeoUtil {
 
     public static double distance(Point p1, Point p2) {
         return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+    }
+
+    public static double angle(NodeContainer n1, NodeContainer n2) {
+        return angle(new LatLng(n1.getEntity().getLatitude(), n1.getEntity().getLongitude()),
+                new LatLng(n2.getEntity().getLatitude(), n2.getEntity().getLongitude()));
     }
 
     public static double angle(LatLng l1, LatLng l2) {
@@ -121,5 +132,20 @@ public class GeoUtil {
         LatLng newStart = movePoint(lineStart, 3, angle);
         LatLng newEnd = movePoint(lineEnd, 3, angle);
         return new Pair<>(newStart, newEnd);
+    }
+
+/*    public static double calculateAngle(NodeContainer start, NodeContainer v1End, NodeContainer v2End) {
+        Point pStart = toMerkator(start);
+        Point p1End = toMerkator(v1End);
+        Point p2End = toMerkator(v2End);
+        return Math.acos()
+    }*/
+
+    private double dot(Point p1, Point p2) {
+        return p1.x * p2.x + p1.y * p2.y;
+    }
+
+    private double norm(Point p) {
+        return Math.sqrt(Math.pow(p.x, 2) + Math.pow(p.y, 2));
     }
 }

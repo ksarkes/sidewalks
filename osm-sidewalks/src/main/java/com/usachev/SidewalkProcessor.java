@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javafx.util.Pair;
+
 
 /**
  * Created by Andrey on 23.12.2016.
@@ -27,10 +29,12 @@ public class SidewalkProcessor {
     private ArrayList<RelationContainer> relations = new ArrayList<>();
     private ArrayList<WayContainer> sidewalks = new ArrayList<>();
 
-    // For getting node by its id in WayNode
+    // For getting node by its id (e.g. in WayNode)
     private HashMap<Long, NodeContainer> nodesMap = new HashMap<>();
-    // For getting way related to specified node id
-    private HashMap<Long, ArrayList<Long>> waysMap = new HashMap<>();
+    // For getting way by its id
+    private HashMap<Long, WayContainer> waysMap = new HashMap<>();
+    // For getting ways related to specified node id
+    private HashMap<Long, ArrayList<Long>> waysNodesMap = new HashMap<>();
     // For getting node`s adjacent nodes
     private HashMap<Long, ArrayList<Long>> adjacentNodes = new HashMap<>();
 
@@ -49,19 +53,22 @@ public class SidewalkProcessor {
 
     public void addWay(WayContainer wayContainer) {
         ways.add(wayContainer);
+        long id = wayContainer.getEntity().getId();
+        waysMap.put(id, wayContainer);
+
         List<WayNode> wayNodes = wayContainer.getEntity().getWayNodes();
         for (int i = 0; i < wayNodes.size(); i++) {
             WayNode wayNode = wayNodes.get(i);
             long nodeId = wayNode.getNodeId();
-            if (waysMap.get(nodeId) == null) {
+            if (waysNodesMap.get(nodeId) == null) {
                 ArrayList<Long> waysArray = new ArrayList<>();
                 waysArray.add(wayContainer.getEntity().getId());
-                waysMap.put(nodeId, waysArray);
+                waysNodesMap.put(nodeId, waysArray);
 //                ArrayList<Long> adjacents = new ArrayList<>();
 //                adjacents.add(id);
 //                adjacentNodes.put(id, adjacents);
             } else {
-                waysMap.get(nodeId).add(wayContainer.getEntity().getId());
+                waysNodesMap.get(nodeId).add(wayContainer.getEntity().getId());
 //                if (i > 0) {
 //                    long prevAdj = wayNodes.get(i - 1).getNodeId();
 //                    adjacentNodes.get(nodeId).add(prevAdj);
@@ -110,24 +117,141 @@ public class SidewalkProcessor {
         }
         ways = containers;
 
-        for (WayContainer way : ways) {
-
-        }
-
         for (WayContainer way : sidewalks) {
-            for (WayNode wayNode : way.getEntity().getWayNodes()) {
-                NodeContainer node = nodesMap.get(wayNode.getNodeId());
-                if (isCrossroad(node))
-                    log("wow");
+            ArrayList<WayNode> wayNodes = (ArrayList<WayNode>) way.getEntity().getWayNodes();
+            for (int i = 0; i < wayNodes.size(); i++) {
+                NodeContainer node = nodesMap.get(wayNodes.get(i).getNodeId());
+                if (isCrossroad(node)) {
+                    Long prevNodeId = null, nextNodeId = null;
+                    // TODO: init this angle in all bracnes
+                    Double initialAngle = null;
+
+                    if (i > 0) {
+                        prevNodeId = wayNodes.get(i - 1).getNodeId();
+                        NodeContainer prevNode = nodesMap.get(prevNodeId);
+                        initialAngle = GeoUtil.angle(node, prevNode);
+                    } else {
+                        // i always > 2, so we can do that
+                        nextNodeId = wayNodes.get(i + 1).getNodeId();
+                        NodeContainer nextNode = nodesMap.get(nextNodeId);
+                        initialAngle = GeoUtil.angle(node, nextNode);
+                    }
+
+                    Pair<Long, Long> nearests;
+                    NodeContainer nearestLeft, nearestRight;
+                    if (prevNodeId != null) {
+                        nearests = findNearestNodes(node, initialAngle, prevNodeId);
+                        nearestLeft = nodesMap.get(nearests.getKey());
+                        nearestRight = nodesMap.get(nearests.getValue());
+                    }
+                    else {
+                        nearests = findNearestNodes(node, initialAngle, nextNodeId);
+                        nearestRight = nodesMap.get(nearests.getKey());
+                        nearestLeft = nodesMap.get(nearests.getValue());
+                    }
+                }
             }
         }
         writeOsmXml();
-        writeSidiewalks();
-    }
-    private boolean isCrossroad(NodeContainer node) {
-        return waysMap.get(node.getEntity().getId()).size() > 1;
+        writeSidewalks();
     }
 
+    private Pair<Long, Long> findNearestNodes(NodeContainer node, double initialAngle, long unhandledNode) {
+
+        ArrayList<Long> adjacents = findAllAdjacentNodes(node);
+
+        Long nearestLeftId = null, nearestRightId = null;
+        Double nearestLeftAngle = null, nearestRightAngle = null;
+
+        for (Long adjId : adjacents) {
+            if (!adjId.equals(unhandledNode)) {
+                NodeContainer currAdjNode = nodesMap.get(adjId);
+                double currAngle = GeoUtil.angle(node, currAdjNode);
+
+                // Init it by some values
+                if (nearestLeftAngle == null) {
+                    nearestLeftAngle = currAngle;
+                    nearestLeftId = adjId;
+                }
+                if (nearestRightAngle == null) {
+                    nearestRightAngle = currAngle;
+                    nearestRightId = adjId;
+                }
+
+                if (initialAngle < 0) {
+                    if (nearestRightAngle < initialAngle) {
+                        if (currAngle > initialAngle ||
+                                currAngle < nearestRightAngle) {
+                            nearestRightAngle = currAngle;
+                            nearestRightId = adjId;
+                        }
+                    } else if (currAngle < nearestRightAngle
+                            && currAngle > initialAngle) {
+                        nearestRightAngle = currAngle;
+                        nearestRightId = adjId;
+                    }
+
+                    if (nearestLeftAngle < initialAngle) {
+                        if (currAngle > nearestLeftAngle
+                                && currAngle < initialAngle) {
+                            nearestLeftAngle = currAngle;
+                            nearestLeftId = adjId;
+                        }
+                    } else if (currAngle < initialAngle
+                            || currAngle > nearestLeftAngle) {
+                        nearestLeftAngle = currAngle;
+                        nearestLeftId = adjId;
+                    }
+                } else {
+                    if (nearestRightAngle > initialAngle) {
+                        if (currAngle > initialAngle
+                                && currAngle < nearestRightAngle) {
+                            nearestRightAngle = currAngle;
+                            nearestRightId = adjId;
+                        }
+                    } else if (currAngle < nearestRightAngle
+                            || currAngle > initialAngle) {
+                        nearestRightAngle = currAngle;
+                        nearestRightId = adjId;
+                    }
+
+                    if (nearestLeftAngle > initialAngle) {
+                        if (currAngle > nearestLeftAngle
+                                || currAngle < initialAngle) {
+                            nearestLeftAngle = currAngle;
+                            nearestLeftId = adjId;
+                        }
+                    } else if (currAngle < initialAngle
+                            && currAngle > nearestLeftAngle) {
+                        nearestLeftAngle = currAngle;
+                        nearestLeftId = adjId;
+                    }
+                }
+            }
+        }
+        return new Pair<>(nearestLeftId, nearestRightId);
+    }
+
+    private ArrayList<Long> findAllAdjacentNodes(NodeContainer node) {
+        ArrayList<Long> adjacentNodes = new ArrayList<>();
+        for (Long wayId : waysNodesMap.get(node.getEntity().getId())) {
+            // Find adjacent nodes to specified node for each intersected way in this crossroad
+            ArrayList<WayNode> wayNodes = (ArrayList<WayNode>) waysMap.get(wayId).getEntity().getWayNodes();
+            for (int i = 0; i < wayNodes.size(); i++) {
+                if (wayNodes.get(i).getNodeId() == node.getEntity().getId()) {
+                    if (i > 0)
+                        adjacentNodes.add(wayNodes.get(i - 1).getNodeId());
+                    if (i < wayNodes.size() - 1)
+                        adjacentNodes.add(wayNodes.get(i + 1).getNodeId());
+                }
+            }
+        }
+        return adjacentNodes;
+    }
+
+    private boolean isCrossroad(NodeContainer node) {
+        return waysNodesMap.get(node.getEntity().getId()).size() > 1;
+    }
 
     private void writeOsmXml() {
         XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
@@ -145,7 +269,7 @@ public class SidewalkProcessor {
         xmlWriter.release();
     }
 
-    private void writeSidiewalks()  {
+    private void writeSidewalks()  {
         XmlWriter xmlWriter = new XmlWriter(new File("sidewalks2.osm"), CompressionMethod.None);
 
 //        for (BoundContainer bound : bounds)
@@ -165,11 +289,14 @@ public class SidewalkProcessor {
         xmlWriter.release();
     }
 
-    public static void log(String l) {
-        System.out.println(l);
+    public static void log(String s) {
+        System.out.println(s);
     }
     public static void log(double d) {
         System.out.println(String.valueOf(d));
+    }
+    public static void log(long l) {
+        System.out.println(String.valueOf(l));
     }
 
 }
