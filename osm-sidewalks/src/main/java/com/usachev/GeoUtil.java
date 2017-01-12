@@ -2,6 +2,10 @@ package com.usachev;
 
 
 import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
+import org.openstreetmap.osmosis.core.domain.v0_6.CommonEntityData;
+import org.openstreetmap.osmosis.core.domain.v0_6.Node;
+
+import java.util.Calendar;
 
 import javafx.util.Pair;
 
@@ -80,7 +84,7 @@ public class GeoUtil {
      * @param bearing angle in degrees
      * @return moved point coordinates
      */
-    public static LatLng movePoint(LatLng center, int distance, double bearing) {
+    private static LatLng movePoint(LatLng center, int distance, double bearing) {
         double lat1 = center.getLatitude() * RADIANS;
         double lon1 = center.getLongitude() * RADIANS;
         double radbear = bearing * RADIANS;
@@ -103,6 +107,80 @@ public class GeoUtil {
 
     public static final int LEFT = 1;
     public static final int RIGHT = 2;
+
+    public static Pair<NodeContainer, NodeContainer> movePath(NodeContainer n1, NodeContainer n2, int direction) {
+        Pair<LatLng, LatLng> pair = moveLine(new LatLng(n1.getEntity().getLatitude(), n1.getEntity().getLongitude()),
+                new LatLng(n2.getEntity().getLatitude(), n2.getEntity().getLongitude()), direction);
+
+
+        Node newNode1 = new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
+                pair.getKey().getLatitude(), pair.getKey().getLongitude());
+        Node newNode2 = new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
+                pair.getValue().getLatitude(), pair.getValue().getLongitude());
+
+//        n1.getEntity().setLatitude(pair.getKey().getLatitude());
+//        n1.getEntity().setLongitude(pair.getKey().getLongitude());
+//        n1.getEntity().setId(Main.getNewId());
+
+//        n2.getEntity().setLatitude(pair.getValue().getLatitude());
+//        n2.getEntity().setLongitude(pair.getValue().getLongitude());
+//        n2.getEntity().setId(Main.getNewId());
+
+        return new Pair<>(new NodeContainer(newNode1), new NodeContainer(newNode2));
+    }
+
+    public static NodeContainer moveNode(NodeContainer node, NodeContainer prevNode, NodeContainer nextNode, int direction) {
+        Point p1 = toMerkator(node);
+        Point p2 = null;
+        Point p3 = null;
+        Point bisector;
+
+        if (prevNode != null && nextNode != null) {
+            p2 = toMerkator(prevNode);
+            p3 = toMerkator(nextNode);
+            Point vec1 = new Point(p1.x - p2.x, p1.y - p2.y);
+            Point vec2 = new Point(p3.x - p1.x, p3.y - p1.y);
+            double p = vec1.y * vec2.x - vec1.x * vec2.y;
+
+            if (direction == LEFT) {
+                if (p < 0)
+                    bisector = new Point(vec2.x - vec1.x, vec2.y - vec1.y);
+                else if (p > 0)
+                    bisector = new Point(-(vec2.x - vec1.x), -(vec2.y - vec1.y));
+                else
+                    bisector = orth1(vec1);
+
+            } else {
+                if (p > 0)
+                    bisector = new Point(vec1.x - vec2.x, vec1.y - vec2.y);
+                else if (p < 0)
+                    bisector = new Point(-(vec1.x - vec2.x), -(vec1.y - vec2.y));
+                else
+                    bisector = orth2(vec1);
+            }
+        } else {
+            if (direction == LEFT) {
+                if (prevNode != null)
+                    bisector = orth1(toMerkator(prevNode));
+                else
+                    bisector = orth1(toMerkator(nextNode));
+            } else {
+                if (prevNode != null)
+                    bisector = orth2(toMerkator(prevNode));
+                else
+                    bisector = orth2(toMerkator(nextNode));
+            }
+        }
+
+        Point newPoint = new Point(p1.x + bisector.x, p1.y + bisector.y);
+        LatLng latLng = new LatLng(node.getEntity().getLatitude(), node.getEntity().getLongitude());
+        double angle = angle(latLng, toLatLng(newPoint));
+        LatLng newStart = movePoint(latLng, 3, angle);
+
+        return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
+                newStart.getLatitude(), newStart.getLongitude()));
+
+    }
 
     public static Pair<LatLng,LatLng> moveLine(LatLng lineStart, LatLng lineEnd, int direction) {
         Point p1 = toMerkator(lineStart);
@@ -128,7 +206,7 @@ public class GeoUtil {
         Point newStartXY = new Point(p1.x + orth.x, p1.y + orth.y);
         Point newEndXY = new Point(p2.x + orth.x, p2.y + orth.y);
 
-        double angle = angle(toLatLng(newStartXY), lineStart);
+        double angle = angle(lineStart, toLatLng(newStartXY));
         LatLng newStart = movePoint(lineStart, 3, angle);
         LatLng newEnd = movePoint(lineEnd, 3, angle);
         return new Pair<>(newStart, newEnd);

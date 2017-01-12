@@ -6,6 +6,7 @@ import org.openstreetmap.osmosis.core.container.v0_6.EntityProcessor;
 import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
 import org.openstreetmap.osmosis.core.container.v0_6.RelationContainer;
 import org.openstreetmap.osmosis.core.container.v0_6.WayContainer;
+import org.openstreetmap.osmosis.core.domain.v0_6.OsmUser;
 import org.openstreetmap.osmosis.core.task.v0_6.Sink;
 import org.openstreetmap.osmosis.xml.v0_6.impl.FastXmlParser;
 
@@ -23,6 +24,17 @@ import javax.xml.stream.XMLStreamReader;
  * Created by Andrey on 16.11.2016.
  */
 public class Main {
+
+    private static long newId = -1;
+
+    public static long getNewId() {
+        return newId--;
+    }
+
+    public static OsmUser getOsmUser() {
+        return new OsmUser(100501, "ksarkes");
+    }
+
     public static void main(String[] args) throws IOException, XMLStreamException
     {
 //        InputStream input = new FileInputStream("ptz.osm_02.osm");
