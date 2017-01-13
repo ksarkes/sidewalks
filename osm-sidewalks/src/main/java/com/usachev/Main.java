@@ -90,7 +90,11 @@ public class Main {
         FastXmlParser fastXmlParser = new FastXmlParser(sink, r, true);
         fastXmlParser.readOsm();
 
-        processor.process();
+        try {
+            processor.process();
+        } catch (UnexpectedSidewalkTypeException e) {
+            e.printStackTrace();
+        }
     }
 
 

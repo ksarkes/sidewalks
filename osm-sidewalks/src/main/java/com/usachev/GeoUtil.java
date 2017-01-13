@@ -7,8 +7,6 @@ import org.openstreetmap.osmosis.core.domain.v0_6.Node;
 
 import java.util.Calendar;
 
-import javafx.util.Pair;
-
 
 /**
  * Created by Andrey on 29.03.2016.
@@ -108,6 +106,7 @@ public class GeoUtil {
     public static final int LEFT = 1;
     public static final int RIGHT = 2;
 
+/*
     public static Pair<NodeContainer, NodeContainer> movePath(NodeContainer n1, NodeContainer n2, int direction) {
         Pair<LatLng, LatLng> pair = moveLine(new LatLng(n1.getEntity().getLatitude(), n1.getEntity().getLongitude()),
                 new LatLng(n2.getEntity().getLatitude(), n2.getEntity().getLongitude()), direction);
@@ -128,6 +127,7 @@ public class GeoUtil {
 
         return new Pair<>(new NodeContainer(newNode1), new NodeContainer(newNode2));
     }
+*/
 
     public static NodeContainer moveNode(NodeContainer node, NodeContainer prevNode, NodeContainer nextNode, int direction) {
         Point p1 = toMerkator(node);
@@ -182,7 +182,7 @@ public class GeoUtil {
 
     }
 
-    public static Pair<LatLng,LatLng> moveLine(LatLng lineStart, LatLng lineEnd, int direction) {
+/*    public static Pair<LatLng,LatLng> moveLine(LatLng lineStart, LatLng lineEnd, int direction) {
         Point p1 = toMerkator(lineStart);
         Point p2 = toMerkator(lineEnd);
 
@@ -210,7 +210,7 @@ public class GeoUtil {
         LatLng newStart = movePoint(lineStart, 3, angle);
         LatLng newEnd = movePoint(lineEnd, 3, angle);
         return new Pair<>(newStart, newEnd);
-    }
+    }*/
 
 /*    public static double calculateAngle(NodeContainer start, NodeContainer v1End, NodeContainer v2End) {
         Point pStart = toMerkator(start);

@@ -12,6 +12,7 @@ import org.openstreetmap.osmosis.xml.common.CompressionMethod;
 import org.openstreetmap.osmosis.xml.v0_6.XmlWriter;
 
 import java.io.File;
+import java.rmi.UnexpectedException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -92,7 +93,7 @@ public class SidewalkProcessor {
         relations.add(relationContainer);
     }
 
-    public void process() {
+    public void process() throws UnexpectedSidewalkTypeException {
 /*        log(GeoUtil.movePoint(new LatLng(61.7849636, 34.352475), 10, 145.63481572463607).toString());
         Pair<LatLng,LatLng> res = GeoUtil.moveLine(new LatLng(61.786135, 34.350503), new LatLng(61.785438, 34.351479), GeoUtil.LEFT);
         log(res.getKey() + " " +  res.getValue());
@@ -187,6 +188,9 @@ public class SidewalkProcessor {
 
                         }
                     } else {
+                        if (initSidewalkType == null)
+                            throw new UnexpectedSidewalkTypeException();
+
                         if (initSidewalkType.equals("both") || initSidewalkType.equals("right")) {
 
                         }
@@ -194,27 +198,48 @@ public class SidewalkProcessor {
 
                     // clear hashmap
                     currentNodeWayMap = new HashMap<>();
-                } else if (i > 0) {
+                } else {
                     String sidewalkDirection = determineSidewalk(way);
+                    if (sidewalkDirection == null)
+                        throw new UnexpectedSidewalkTypeException();
+
                     if (sidewalkDirection.equals("both") || sidewalkDirection.equals("left")) {
-                        Pair<NodeContainer, NodeContainer> newNodes =
+                        NodeContainer prevNode = null, nextNode = null;
+                        if (i > 0)
+                            prevNode = nodesMap.get(wayNodes.get(i - 1).getNodeId());
+                        if (i < wayNodes.size() - 1)
+                            nextNode = nodesMap.get(wayNodes.get(i + 1).getNodeId());
+                        NodeContainer newNode = GeoUtil.moveNode(node, prevNode, nextNode, GeoUtil.LEFT);
+                        newNodesLeft.add(newNode);
+                        wayNodesLeft.add(new WayNode(newNode.getEntity().getId()));
+                        newWritableNodes.add(newNode);
+/*                        Pair<NodeContainer, NodeContainer> newNodes =
                                 GeoUtil.movePath(nodesMap.get(wayNodes.get(i - 1).getNodeId()), node, GeoUtil.LEFT);
                         newNodesLeft.add(newNodes.getKey());
                         newNodesLeft.add(newNodes.getValue());
                         wayNodesLeft.add(new WayNode(newNodes.getKey().getEntity().getId()));
                         wayNodesLeft.add(new WayNode(newNodes.getValue().getEntity().getId()));
                         newWritableNodes.add(newNodes.getKey());
-                        newWritableNodes.add(newNodes.getValue());
+                        newWritableNodes.add(newNodes.getValue());*/
                     }
                     if (sidewalkDirection.equals("both") || sidewalkDirection.equals("right")) {
-                        Pair<NodeContainer, NodeContainer> newNodes =
+                        NodeContainer prevNode = null, nextNode = null;
+                        if (i > 0)
+                            prevNode = nodesMap.get(wayNodes.get(i - 1).getNodeId());
+                        if (i < wayNodes.size() - 1)
+                            nextNode = nodesMap.get(wayNodes.get(i + 1).getNodeId());
+                        NodeContainer newNode = GeoUtil.moveNode(node, prevNode, nextNode, GeoUtil.RIGHT);
+                        newNodesRight.add(newNode);
+                        wayNodesRight.add(new WayNode(newNode.getEntity().getId()));
+                        newWritableNodes.add(newNode);
+/*                        Pair<NodeContainer, NodeContainer> newNodes =
                                 GeoUtil.movePath(nodesMap.get(wayNodes.get(i - 1).getNodeId()), node, GeoUtil.RIGHT);
                         newNodesRight.add(newNodes.getKey());
                         newNodesRight.add(newNodes.getValue());
                         wayNodesRight.add(new WayNode(newNodes.getKey().getEntity().getId()));
                         wayNodesRight.add(new WayNode(newNodes.getValue().getEntity().getId()));
                         newWritableNodes.add(newNodes.getKey());
-                        newWritableNodes.add(newNodes.getValue());
+                        newWritableNodes.add(newNodes.getValue());*/
                     }
                 }
             }
