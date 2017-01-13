@@ -171,9 +171,9 @@ public class SidewalkProcessor {
                         nearestLeft = nodesMap.get(nearests.getValue());
                     }
 
-                    if (nearestLeft == nearestRight && nearestLeft != null)
-                        log("\n" + node.getEntity().getId() + "\nprev " + prevNodeId + "\nnext " + nextNodeId +
-                        "\nleft" + nearestLeft.getEntity().getId() + "\nright" + nearestRight.getEntity().getId());
+//                    if (nearestLeft == nearestRight && nearestLeft != null)
+//                        log("\n" + node.getEntity().getId() + "\nprev " + prevNodeId + "\nnext " + nextNodeId +
+//                        "\nleft" + nearestLeft.getEntity().getId() + "\nright" + nearestRight.getEntity().getId());
                     //TODO: check if right==left
                     String rightSidewalkType = determineSidewalk(nearestRight);
                     String leftSidewalkType = determineSidewalk(nearestLeft);
@@ -402,18 +402,24 @@ public class SidewalkProcessor {
     private void writeSidewalks()  {
         XmlWriter xmlWriter = new XmlWriter(new File("sidewalks2.osm"), CompressionMethod.None);
 
-//        for (BoundContainer bound : bounds)
-//            xmlWriter.process(bound);
+        for (BoundContainer bound : bounds)
+            xmlWriter.process(bound);
 
-//        for (NodeContainer node : nodes)
-//            xmlWriter.process(node);
+        for (NodeContainer node : nodes)
+            xmlWriter.process(node);
 
         for (WayContainer way : sidewalks) {
             xmlWriter.process(way);
         }
 
-//        for (RelationContainer relation : relations)
-//            xmlWriter.process(relation);
+        for (NodeContainer node : newWritableNodes)
+            xmlWriter.process(node);
+
+        for (WayContainer way : newWritableWays)
+            xmlWriter.process(way);
+
+        for (RelationContainer relation : relations)
+            xmlWriter.process(relation);
 
         xmlWriter.complete();
         xmlWriter.release();

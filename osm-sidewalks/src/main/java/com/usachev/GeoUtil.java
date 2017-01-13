@@ -5,6 +5,7 @@ import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
 import org.openstreetmap.osmosis.core.domain.v0_6.CommonEntityData;
 import org.openstreetmap.osmosis.core.domain.v0_6.Node;
 
+import java.awt.geom.Point2D;
 import java.util.Calendar;
 
 
@@ -82,9 +83,10 @@ public class GeoUtil {
      * @param bearing angle in degrees
      * @return moved point coordinates
      */
-    private static LatLng movePoint(LatLng center, int distance, double bearing) {
+    private static LatLng movePoint(LatLng center, double distance, double bearing) {
         double lat1 = center.getLatitude() * RADIANS;
         double lon1 = center.getLongitude() * RADIANS;
+//        bearing += 180;
         double radbear = bearing * RADIANS;
 
         double lat2 = Math.asin(Math.sin(lat1) * Math.cos(distance / EARTH_RADIUS) +
@@ -106,124 +108,96 @@ public class GeoUtil {
     public static final int LEFT = 1;
     public static final int RIGHT = 2;
 
-/*
-    public static Pair<NodeContainer, NodeContainer> movePath(NodeContainer n1, NodeContainer n2, int direction) {
-        Pair<LatLng, LatLng> pair = moveLine(new LatLng(n1.getEntity().getLatitude(), n1.getEntity().getLongitude()),
-                new LatLng(n2.getEntity().getLatitude(), n2.getEntity().getLongitude()), direction);
-
-
-        Node newNode1 = new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
-                pair.getKey().getLatitude(), pair.getKey().getLongitude());
-        Node newNode2 = new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
-                pair.getValue().getLatitude(), pair.getValue().getLongitude());
-
-//        n1.getEntity().setLatitude(pair.getKey().getLatitude());
-//        n1.getEntity().setLongitude(pair.getKey().getLongitude());
-//        n1.getEntity().setId(Main.getNewId());
-
-//        n2.getEntity().setLatitude(pair.getValue().getLatitude());
-//        n2.getEntity().setLongitude(pair.getValue().getLongitude());
-//        n2.getEntity().setId(Main.getNewId());
-
-        return new Pair<>(new NodeContainer(newNode1), new NodeContainer(newNode2));
-    }
-*/
-
     public static NodeContainer moveNode(NodeContainer node, NodeContainer prevNode, NodeContainer nextNode, int direction) {
         Point p1 = toMerkator(node);
-        Point p2 = null;
-        Point p3 = null;
+        Point p2;
+        Point p3;
         Point bisector;
 
         if (prevNode != null && nextNode != null) {
             p2 = toMerkator(prevNode);
             p3 = toMerkator(nextNode);
+
             Point vec1 = new Point(p1.x - p2.x, p1.y - p2.y);
+            vec1 = new Point(vec1.x / norm(vec1), vec1.y / norm(vec1));
             Point vec2 = new Point(p3.x - p1.x, p3.y - p1.y);
+            vec2 = new Point(vec2.x / norm(vec2), vec2.y / norm(vec2));
+
             double p = vec1.y * vec2.x - vec1.x * vec2.y;
 
             if (direction == LEFT) {
-                if (p < 0)
-                    bisector = new Point(vec2.x - vec1.x, vec2.y - vec1.y);
-                else if (p > 0)
-                    bisector = new Point(-(vec2.x - vec1.x), -(vec2.y - vec1.y));
-                else
+                bisector = new Point(p1.x - vec1.x + vec2.x, p1.y - vec1.y + vec2.y);
+                if (p > 0) {
+                    bisector = new Point(bisector.x - 2 * (bisector.x - p1.x),
+                            bisector.y - 2 * (bisector.y - p1.y));
+                }
+                else if (p == 0)
                     bisector = orth1(vec1);
 
             } else {
-                if (p > 0)
-                    bisector = new Point(vec1.x - vec2.x, vec1.y - vec2.y);
-                else if (p < 0)
-                    bisector = new Point(-(vec1.x - vec2.x), -(vec1.y - vec2.y));
-                else
+                bisector = new Point(p1.x - vec1.x + vec2.x, p1.y - vec1.y + vec2.y);
+                if (p < 0) {
+                    bisector = new Point(bisector.x - 2 * (bisector.x - p1.x),
+                            bisector.y - 2 * (bisector.y - p1.y));
+                }
+                else if (p == 0)
                     bisector = orth2(vec1);
             }
         } else {
+            Point point;
+            Point vec;
             if (direction == LEFT) {
-                if (prevNode != null)
-                    bisector = orth1(toMerkator(prevNode));
-                else
-                    bisector = orth1(toMerkator(nextNode));
+                if (prevNode != null) {
+                    point = toMerkator(prevNode);
+                    vec = new Point(p1.x - point.x, p1.y - point.y);
+                }
+                else {
+                    point = toMerkator(nextNode);
+                    vec = new Point(point.x - p1.x, point.y - p1.y);
+                }
+                Point orth = orth1(vec);
+                bisector = new Point(p1.x + orth.x, p1.y + orth.y);
             } else {
-                if (prevNode != null)
-                    bisector = orth2(toMerkator(prevNode));
-                else
-                    bisector = orth2(toMerkator(nextNode));
+                if (prevNode != null) {
+                    point = toMerkator(prevNode);
+                    vec = new Point(p1.x - point.x, p1.y - point.y);
+                }
+                else {
+                    point = toMerkator(nextNode);
+                    vec = new Point(point.x - p1.x, point.y - p1.y);
+                }
+                Point orth = orth2(vec);
+                bisector = new Point(p1.x + orth.x, p1.y + orth.y);
             }
         }
 
-        Point newPoint = new Point(p1.x + bisector.x, p1.y + bisector.y);
+        Point newPoint = new Point(bisector.x, bisector.y);
         LatLng latLng = new LatLng(node.getEntity().getLatitude(), node.getEntity().getLongitude());
-        double angle = angle(latLng, toLatLng(newPoint));
-        LatLng newStart = movePoint(latLng, 3, angle);
-
+        LatLng newStart = movePoint(latLng, 3, azimuth(latLng, toLatLng(newPoint)));
         return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
                 newStart.getLatitude(), newStart.getLongitude()));
 
     }
 
-/*    public static Pair<LatLng,LatLng> moveLine(LatLng lineStart, LatLng lineEnd, int direction) {
-        Point p1 = toMerkator(lineStart);
-        Point p2 = toMerkator(lineEnd);
-
-        Point vec = new Point(p1.x - p2.x, p1.y - p2.y);
-
-        // TODO
-        Point orth;
-        switch (direction) {
-            case LEFT:
-                orth = orth1(vec);
-                break;
-            case RIGHT:
-                orth = orth2(vec);
-                break;
-            default:
-                orth = orth2(vec);
-                break;
-        }
-
-        // Init new start/end without precise distance, just orthogonal direction
-        Point newStartXY = new Point(p1.x + orth.x, p1.y + orth.y);
-        Point newEndXY = new Point(p2.x + orth.x, p2.y + orth.y);
-
-        double angle = angle(lineStart, toLatLng(newStartXY));
-        LatLng newStart = movePoint(lineStart, 3, angle);
-        LatLng newEnd = movePoint(lineEnd, 3, angle);
-        return new Pair<>(newStart, newEnd);
-    }*/
-
-/*    public static double calculateAngle(NodeContainer start, NodeContainer v1End, NodeContainer v2End) {
-        Point pStart = toMerkator(start);
-        Point p1End = toMerkator(v1End);
-        Point p2End = toMerkator(v2End);
-        return Math.acos()
-    }*/
+    private static double azimuth(LatLng latLng1, LatLng latLng2) {
+        double lat1 = latLng1.getLatitude();
+        double lon1 = latLng1.getLongitude();
+        double lat2 = latLng2.getLatitude();
+        double lon2 = latLng2.getLongitude();
+        double X = Math.cos(lat2 * RADIANS) * Math.sin(lon2 * RADIANS - lon1 * RADIANS);
+        double Y = Math.cos(lat1 * RADIANS) * Math.sin(lat2 * RADIANS) - Math.sin(lat1 * RADIANS)
+                * Math.cos(lat2 * RADIANS) * Math.cos(lon2 * RADIANS - lon1 * RADIANS);
+        double az = Math.atan2(X, Y) * DEGREES;
+        if (az < 0)
+            az += 360;
+        return az;
+    }
 
     private double dot(Point p1, Point p2) {
         return p1.x * p2.x + p1.y * p2.y;
     }
 
-    private double norm(Point p) {
+    private static double norm(Point p) {
         return Math.sqrt(Math.pow(p.x, 2) + Math.pow(p.y, 2));
     }
 }
