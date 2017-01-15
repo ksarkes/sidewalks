@@ -5,7 +5,6 @@ import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
 import org.openstreetmap.osmosis.core.domain.v0_6.CommonEntityData;
 import org.openstreetmap.osmosis.core.domain.v0_6.Node;
 
-import java.awt.geom.Point2D;
 import java.util.Calendar;
 
 
@@ -86,7 +85,6 @@ public class GeoUtil {
     private static LatLng movePoint(LatLng center, double distance, double bearing) {
         double lat1 = center.getLatitude() * RADIANS;
         double lon1 = center.getLongitude() * RADIANS;
-//        bearing += 180;
         double radbear = bearing * RADIANS;
 
         double lat2 = Math.asin(Math.sin(lat1) * Math.cos(distance / EARTH_RADIUS) +
@@ -110,7 +108,7 @@ public class GeoUtil {
 
     public static NodeContainer moveNode(NodeContainer node, NodeContainer prevNode, NodeContainer nextNode, int direction) {
         Point p1 = toMerkator(node);
-        Point p2;
+        Point p2 = null;
         Point p3;
         Point bisector;
 
@@ -171,7 +169,11 @@ public class GeoUtil {
             }
         }
 
-        Point newPoint = new Point(bisector.x, bisector.y);
+        Point p = new Point(-p1.x + bisector.x, -p1.y + bisector.y);
+        double ratio = p2 == null ? p.x : p1.x - p2.x;
+        ratio = Math.abs(ratio);
+        Point newPoint = new Point(p1.x + Math.signum(p.x) * ratio, p1.y + p.y * ratio / Math.abs(p.x));
+
         LatLng latLng = new LatLng(node.getEntity().getLatitude(), node.getEntity().getLongitude());
         LatLng newStart = movePoint(latLng, 3, azimuth(latLng, toLatLng(newPoint)));
         return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
