@@ -100,7 +100,6 @@ public class SidewalkProcessor {
         ArrayList<WayContainer> containers = new ArrayList<>();
         sidewalks = new ArrayList<>();
         for (WayContainer way : ways) {
-            Long id = way.getEntity().getWayNodes().get(0).getNodeId();
             boolean hasFootway = false;
             boolean hasSidewalk = false;
             for (Tag tag : way.getEntity().getTags()) {
@@ -215,12 +214,22 @@ public class SidewalkProcessor {
                                             list);
                                 }
                             } else {
-                                if (inverseDirection)
+                                if (inverseDirection) {
                                     newNode = GeoUtil.moveNode(node, nearestLeft, processingNode, GeoUtil.LEFT);
-                                else
+                                    newTrailNode = GeoUtil.projectNodeToLine(newNode, node, nearestLeft);
+                                    wayNodesLeft.add(new WayNode(newTrailNode.getEntity().getId()));
+                                    wayNodesLeft.add(new WayNode(newNode.getEntity().getId()));
+                                } else {
                                     newNode = GeoUtil.moveNode(node, processingNode, nearestLeft, GeoUtil.LEFT);
-                                wayNodesLeft.add(new WayNode(newNode.getEntity().getId()));
+                                    newTrailNode = GeoUtil.projectNodeToLine(newNode, node, nearestLeft);
+                                    wayNodesLeft.add(new WayNode(newNode.getEntity().getId()));
+                                    wayNodesLeft.add(new WayNode(newTrailNode.getEntity().getId()));
+                                }
+
+                                int index = getInsertIndex(currentNodeWayMap.get(nearestLeftId), node, nearestLeft);
+                                stashedNodes.add(new StashedNode(newTrailNode, currentNodeWayMap.get(nearestLeftId), index));
                                 newWritableNodes.add(newNode);
+                                newWritableNodes.add(newTrailNode);
 
                                 ArrayList<CrossroadAdjacent> list = new ArrayList<>();
                                 if (processedCrossroads.containsKey(crossroadNodeId))
@@ -287,13 +296,22 @@ public class SidewalkProcessor {
                                             list);
                                 }
                             } else {
-                                if (inverseDirection)
+                                if (inverseDirection) {
                                     newNode = GeoUtil.moveNode(node, nearestRight, processingNode, GeoUtil.RIGHT);
-                                else
+                                    newTrailNode = GeoUtil.projectNodeToLine(newNode, node, nearestRight);
+                                    wayNodesRight.add(new WayNode(newTrailNode.getEntity().getId()));
+                                    wayNodesRight.add(new WayNode(newNode.getEntity().getId()));
+                                } else {
                                     newNode = GeoUtil.moveNode(node, processingNode, nearestRight, GeoUtil.RIGHT);
+                                    newTrailNode = GeoUtil.projectNodeToLine(newNode, node, nearestRight);
+                                    wayNodesRight.add(new WayNode(newNode.getEntity().getId()));
+                                    wayNodesRight.add(new WayNode(newTrailNode.getEntity().getId()));
+                                }
 
-                                wayNodesRight.add(new WayNode(newNode.getEntity().getId()));
+                                int index = getInsertIndex(currentNodeWayMap.get(nearestRightId), node, nearestRight);
+                                stashedNodes.add(new StashedNode(newTrailNode, currentNodeWayMap.get(nearestRightId), index));
                                 newWritableNodes.add(newNode);
+                                newWritableNodes.add(newTrailNode);
 
                                 ArrayList<CrossroadAdjacent> list = new ArrayList<>();
                                 if (processedCrossroads.containsKey(crossroadNodeId))
@@ -569,7 +587,6 @@ public class SidewalkProcessor {
     }
 
     private boolean isCrossroad(NodeContainer node) {
-        log(node.getEntity().getId());
         return waysNodesMap.get(node.getEntity().getId()).size() > 1;
     }
 
@@ -582,8 +599,16 @@ public class SidewalkProcessor {
             xmlWriter.process(node);
         for (NodeContainer node : newWritableNodes)
             xmlWriter.process(node);
-        for (WayContainer way : ways)
-            xmlWriter.process(way);
+        for (WayContainer way : ways) {
+            boolean hasSidewalk = false;
+            for (Tag tag : way.getEntity().getTags()) {
+                if (tag.getKey().equals("sidewalk") && (tag.getValue().equals("both") || tag.getValue().equals("right") || tag.getValue().equals("left"))) {
+                    hasSidewalk = true;
+                }
+            }
+            if (!hasSidewalk)
+                xmlWriter.process(way);
+        }
         for (WayContainer way : newWritableWays)
             xmlWriter.process(way);
         for (RelationContainer relation : relations)
