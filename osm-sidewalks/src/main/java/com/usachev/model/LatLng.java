@@ -1,4 +1,4 @@
-package com.usachev;
+package com.usachev.model;
 
 /**
  * Created by Andrey on 23.12.2016.

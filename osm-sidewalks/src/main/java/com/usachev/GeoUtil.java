@@ -1,6 +1,9 @@
 package com.usachev;
 
 
+import com.usachev.model.LatLng;
+import com.usachev.model.Point;
+
 import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
 import org.openstreetmap.osmosis.core.domain.v0_6.CommonEntityData;
 import org.openstreetmap.osmosis.core.domain.v0_6.Node;
@@ -41,12 +44,12 @@ public class GeoUtil {
 
     /**
      * Point projection on the line
-     * @param projected point which need to be projected
+     * @param pointToProject point which need to be pointToProject
      * @param point1 start of the line
      * @param point2 end of the line
      */
-    public static LatLng projectPointToLine(LatLng projected, LatLng point1, LatLng point2) {
-        Point mercProjected = toMerkator(projected);
+    public static LatLng projectPointToLine(LatLng pointToProject, LatLng point1, LatLng point2) {
+        Point mercProjected = toMerkator(pointToProject);
         Point mercPoint1 = toMerkator(point1);
         Point mercPoint2 = toMerkator(point2);
 
@@ -61,6 +64,14 @@ public class GeoUtil {
         x4 = ((x2 - x1) * (y2 - y1) * (y3 - y1) + x1 * Math.pow(y2 - y1, 2) + x3 * Math.pow(x2 - x1, 2)) / (Math.pow(y2 - y1, 2) + Math.pow(x2 - x1, 2));
         y4 = (y2 - y1) * (x4 - x1) / (x2 - x1) + y1;
         return toLatLng(x4, y4);
+    }
+
+    public static NodeContainer projectNodeToLine(NodeContainer nodeToProject, NodeContainer node1, NodeContainer node2) {
+        LatLng newPoint = projectPointToLine(new LatLng(nodeToProject.getEntity().getLatitude(), nodeToProject.getEntity().getLongitude()),
+                new LatLng(node1.getEntity().getLatitude(), node1.getEntity().getLongitude()),
+                new LatLng(node2.getEntity().getLatitude(), node2.getEntity().getLongitude()));
+        return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
+                newPoint.getLatitude(), newPoint.getLongitude()));
     }
 
     public static double distance(Point p1, Point p2) {
@@ -106,6 +117,7 @@ public class GeoUtil {
     public static final int LEFT = 1;
     public static final int RIGHT = 2;
 
+    // Must have at least one of prevNode/nextNode parameter NonNull
     public static NodeContainer moveNode(NodeContainer node, NodeContainer prevNode, NodeContainer nextNode, int direction) {
         Point p1 = toMerkator(node);
         Point p2 = null;
