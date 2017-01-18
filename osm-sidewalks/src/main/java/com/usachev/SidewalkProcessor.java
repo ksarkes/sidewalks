@@ -54,10 +54,11 @@ public class SidewalkProcessor {
     private HashMap<Long, ArrayList<Long>> waysNodesMap = new HashMap<>();
 
     private HashMap<Long, Long> currentNodeWayMap = new HashMap<>();
-
     private ArrayList<StashedNode> stashedNodes = new ArrayList<>();
-
     private HashMap<Long, ArrayList<CrossroadAdjacent>> processedCrossroads = new HashMap<>();
+
+    private ArrayList<WayContainer> newWritableWays = new ArrayList<>();
+    private ArrayList<NodeContainer> newWritableNodes = new ArrayList<>();
 
     public SidewalkProcessor() {
     }
@@ -369,6 +370,10 @@ public class SidewalkProcessor {
 
             Way way1 = new Way(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500), wayNodesLeft);
             Way way2 = new Way(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500), wayNodesRight);
+            way1.getTags().add(new Tag("highway", "footway"));
+            way1.getTags().add(new Tag("footway", "sidewalk"));
+            way2.getTags().add(new Tag("highway", "footway"));
+            way2.getTags().add(new Tag("footway", "sidewalk"));
             newWritableWays.add(new WayContainer(way1));
             newWritableWays.add(new WayContainer(way2));
         }
@@ -376,9 +381,6 @@ public class SidewalkProcessor {
         writeOsmXml();
         writeSidewalks();
     }
-
-    private ArrayList<WayContainer> newWritableWays = new ArrayList<>();
-    private ArrayList<NodeContainer> newWritableNodes = new ArrayList<>();
 
     /**
      * Determine sidewalk type of node which belong to appropriate way in currentNodeWayMap
@@ -600,14 +602,26 @@ public class SidewalkProcessor {
         for (NodeContainer node : newWritableNodes)
             xmlWriter.process(node);
         for (WayContainer way : ways) {
-            boolean hasSidewalk = false;
+            Tag tagToRemove = null;
+            boolean footwaySidewalk = false, highway = false;
+            String name = "";
             for (Tag tag : way.getEntity().getTags()) {
+                if (tag.getKey().equals("footway") && tag.getValue().equals("sidewalk"))
+                    footwaySidewalk = true;
+                if (tag.getKey().equals("highway"))
+                    highway = true;
                 if (tag.getKey().equals("sidewalk") && (tag.getValue().equals("both") || tag.getValue().equals("right") || tag.getValue().equals("left"))) {
-                    hasSidewalk = true;
+                    tagToRemove = tag;
                 }
+                if (tag.getKey().equals("name"))
+                    name = tag.getValue();
             }
-            if (!hasSidewalk)
-                xmlWriter.process(way);
+
+            if (footwaySidewalk && highway)
+                log("Probably mutually exclusive tags: wayId=" + way.getEntity().getId() + " " + name);
+            if (tagToRemove != null)
+                way.getEntity().getTags().remove(tagToRemove);
+            xmlWriter.process(way);
         }
         for (WayContainer way : newWritableWays)
             xmlWriter.process(way);
