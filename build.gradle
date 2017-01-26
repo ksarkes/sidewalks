@@ -1,23 +1,22 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+group 'com.usachev'
+version '1.0-SNAPSHOT'
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+apply plugin: 'java'
+apply plugin: 'application'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
+mainClassName = 'com.usachev.Main'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
 }
 
-allprojects {
-    repositories {
-        jcenter()
-    }
+jar {
+    manifest.attributes("Main-Class": mainClassName);
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+dependencies {
+    compile group: 'org.openstreetmap.osmosis', name: 'osmosis-xml', version: '0.45'
 }

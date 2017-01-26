@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/osm-sidewalks/osm-sidewalks.iml" filepath="$PROJECT_DIR$/osm-sidewalks/osm-sidewalks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sidewalks.iml" filepath="$PROJECT_DIR$/sidewalks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sidewalks.iml" filepath="$PROJECT_DIR$/.idea/modules/sidewalks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sidewalks_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sidewalks_main.iml" group="sidewalks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sidewalks_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sidewalks_test.iml" group="sidewalks" />
     </modules>
   </component>
 </project>

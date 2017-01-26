@@ -1,1 +1,2 @@
-include ':app', ':osm-sidewalks'
+rootProject.name = 'sidewalks'
+
