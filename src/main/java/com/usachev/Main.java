@@ -59,7 +59,6 @@ public class Main {
             input = new FileInputStream(args[0]);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println(System.getProperty("user.dir"));
             return;
         }
 
