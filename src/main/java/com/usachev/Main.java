@@ -11,6 +11,7 @@ import org.openstreetmap.osmosis.core.task.v0_6.Sink;
 import org.openstreetmap.osmosis.xml.v0_6.impl.FastXmlParser;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
@@ -48,8 +49,19 @@ public class Main {
 
     public static void main(String[] args) throws IOException, XMLStreamException
     {
-//        InputStream input = new FileInputStream("ptz.osm_02.osm");
-        InputStream input = new FileInputStream("map2.osm");
+        if (args.length < 1) {
+            System.out.println("1st argument should be OSM XML file");
+            return;
+        }
+
+        InputStream input;
+        try {
+            input = new FileInputStream(args[0]);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println(System.getProperty("user.dir"));
+            return;
+        }
 
         XMLInputFactory factory = XMLInputFactory.newInstance();
         // configure it to create readers that coalesce adjacent character sections

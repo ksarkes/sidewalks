@@ -14,7 +14,15 @@ repositories {
 }
 
 jar {
-    manifest.attributes("Main-Class": mainClassName);
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    manifest {
+        attributes 'Manifest-Version': 1.0,
+                'Main-Class': mainClassName
+    }
 }
 
 dependencies {
