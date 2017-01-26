@@ -10,6 +10,8 @@ import org.openstreetmap.osmosis.core.domain.v0_6.Node;
 
 import java.util.Calendar;
 
+import static com.usachev.Main.getChangeSetId;
+
 
 /**
  * Created by Andrey on 29.03.2016.
@@ -28,7 +30,7 @@ public class GeoUtil {
         // lng as lambda, lat as phi
         double radlat = point.getLatitude() * Math.PI / 180;
         double radlng = point.getLongitude() * Math.PI / 180;
-        return new Point(radlng, Math.log(Math.tan(Math.PI/4 + radlat/2)));
+        return new Point(radlng, Math.log(Math.tan(Math.PI / 4 + radlat / 2)));
     }
 
     public static LatLng toLatLng(Point p) {
@@ -36,7 +38,7 @@ public class GeoUtil {
     }
 
     public static LatLng toLatLng(double x, double y) {
-        double radlat = 2 * Math.atan(Math.exp(y)) - Math.PI/2;
+        double radlat = 2 * Math.atan(Math.exp(y)) - Math.PI / 2;
         double deglat = radlat * DEGREES;
         double deglng = x * DEGREES;
         return new LatLng(deglat, deglng);
@@ -44,6 +46,7 @@ public class GeoUtil {
 
     /**
      * Point projection on the line
+     *
      * @param pointToProject point which need to be pointToProject
      * @param point1 start of the line
      * @param point2 end of the line
@@ -70,7 +73,7 @@ public class GeoUtil {
         LatLng newPoint = projectPointToLine(new LatLng(nodeToProject.getEntity().getLatitude(), nodeToProject.getEntity().getLongitude()),
                 new LatLng(node1.getEntity().getLatitude(), node1.getEntity().getLongitude()),
                 new LatLng(node2.getEntity().getLatitude(), node2.getEntity().getLongitude()));
-        return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
+        return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), getChangeSetId()),
                 newPoint.getLatitude(), newPoint.getLongitude()));
     }
 
@@ -140,8 +143,7 @@ public class GeoUtil {
                 if (p > 0) {
                     bisector = new Point(bisector.x - 2 * (bisector.x - p1.x),
                             bisector.y - 2 * (bisector.y - p1.y));
-                }
-                else if (p == 0)
+                } else if (p == 0)
                     bisector = orth1(vec1);
 
             } else {
@@ -149,8 +151,7 @@ public class GeoUtil {
                 if (p < 0) {
                     bisector = new Point(bisector.x - 2 * (bisector.x - p1.x),
                             bisector.y - 2 * (bisector.y - p1.y));
-                }
-                else if (p == 0)
+                } else if (p == 0)
                     bisector = orth2(vec1);
             }
         } else {
@@ -160,8 +161,7 @@ public class GeoUtil {
                 if (prevNode != null) {
                     point = toMerkator(prevNode);
                     vec = new Point(p1.x - point.x, p1.y - point.y);
-                }
-                else {
+                } else {
                     point = toMerkator(nextNode);
                     vec = new Point(point.x - p1.x, point.y - p1.y);
                 }
@@ -171,8 +171,7 @@ public class GeoUtil {
                 if (prevNode != null) {
                     point = toMerkator(prevNode);
                     vec = new Point(p1.x - point.x, p1.y - point.y);
-                }
-                else {
+                } else {
                     point = toMerkator(nextNode);
                     vec = new Point(point.x - p1.x, point.y - p1.y);
                 }
@@ -188,7 +187,7 @@ public class GeoUtil {
 
         LatLng latLng = new LatLng(node.getEntity().getLatitude(), node.getEntity().getLongitude());
         LatLng newStart = movePoint(latLng, 3, azimuth(latLng, toLatLng(newPoint)));
-        return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500),
+        return new NodeContainer(new Node(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), getChangeSetId()),
                 newStart.getLatitude(), newStart.getLongitude()));
 
     }

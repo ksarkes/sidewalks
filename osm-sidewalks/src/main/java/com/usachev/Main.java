@@ -26,13 +26,24 @@ import javax.xml.stream.XMLStreamReader;
 public class Main {
 
     private static long newId = -1;
+    private static String OSM_USERNAME = "ksarkes";
+    private static int OSM_USERID = 100501;
 
+    // If you want to load new data on Openstreetmap.org make this value negative and decrease it
     public static long getNewId() {
-        return newId--;
+        return newId++;
+    }
+
+    public static long getChangeSetId() {
+        return 100500;
+    }
+
+    public static void setNewId(long newId) {
+        Main.newId = newId + 1;
     }
 
     public static OsmUser getOsmUser() {
-        return new OsmUser(100501, "ksarkes");
+        return new OsmUser(OSM_USERID, OSM_USERNAME);
     }
 
     public static void main(String[] args) throws IOException, XMLStreamException

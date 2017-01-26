@@ -14,7 +14,7 @@ public class StashedNode {
 
     private NodeContainer newNode;
 
-    public StashedNode( NodeContainer newNode,Long wayId, int insertIndex) {
+    public StashedNode(NodeContainer newNode, Long wayId, int insertIndex) {
         this.newNode = newNode;
         this.wayId = wayId;
         this.insertIndex = insertIndex;

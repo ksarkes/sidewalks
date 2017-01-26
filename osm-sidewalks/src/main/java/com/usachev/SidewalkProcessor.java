@@ -36,7 +36,7 @@ public class SidewalkProcessor {
     private final static int NEAREST_RIGHT = 2;
 
 
-    // hand of new node by vector {oldNode, crossroad}
+    // hand of the new node by vector {oldNode, crossroad}
     private static final int LEFT = 1;
     private static final int RIGHT = 2;
 
@@ -60,22 +60,28 @@ public class SidewalkProcessor {
     private ArrayList<WayContainer> newWritableWays = new ArrayList<>();
     private ArrayList<NodeContainer> newWritableNodes = new ArrayList<>();
 
+    private long maxId = 0;
+
     public SidewalkProcessor() {
     }
 
     public void addBound(BoundContainer boundContainer) {
+        long id = boundContainer.getEntity().getId();
+        if (id > maxId) maxId = id;
         bounds.add(boundContainer);
     }
 
     public void addNode(NodeContainer nodeContainer) {
         nodes.add(nodeContainer);
         long id = nodeContainer.getEntity().getId();
+        if (id > maxId) maxId = id;
         nodesMap.put(id, nodeContainer);
     }
 
     public void addWay(WayContainer wayContainer) {
         ways.add(wayContainer);
         long id = wayContainer.getEntity().getId();
+        if (id > maxId) maxId = id;
         waysMap.put(id, wayContainer);
 
         List<WayNode> wayNodes = wayContainer.getEntity().getWayNodes();
@@ -93,11 +99,13 @@ public class SidewalkProcessor {
     }
 
     public void addRelation(RelationContainer relationContainer) {
+        long id = relationContainer.getEntity().getId();
+        if (id > maxId) maxId = id;
         relations.add(relationContainer);
     }
 
     public void process() throws UnexpectedSidewalkTypeException {
-
+        Main.setNewId(maxId);
         ArrayList<WayContainer> containers = new ArrayList<>();
         sidewalks = new ArrayList<>();
         for (WayContainer way : ways) {
@@ -111,7 +119,7 @@ public class SidewalkProcessor {
                     hasSidewalk = true;
                 }
             }
-            if (!hasFootway)
+//            if (!hasFootway)
                 containers.add(way);
             if (hasSidewalk) {
                 sidewalks.add(way);
@@ -368,8 +376,8 @@ public class SidewalkProcessor {
                 }
             }
 
-            Way way1 = new Way(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500), wayNodesLeft);
-            Way way2 = new Way(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), -100500), wayNodesRight);
+            Way way1 = new Way(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), Main.getChangeSetId()), wayNodesLeft);
+            Way way2 = new Way(new CommonEntityData(Main.getNewId(), 1, Calendar.getInstance().getTime(), Main.getOsmUser(), Main.getChangeSetId()), wayNodesRight);
             way1.getTags().add(new Tag("highway", "footway"));
             way1.getTags().add(new Tag("footway", "sidewalk"));
             way2.getTags().add(new Tag("highway", "footway"));
