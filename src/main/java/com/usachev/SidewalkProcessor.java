@@ -29,12 +29,13 @@ import javafx.util.Pair;
 @SuppressWarnings("WeakerAccess")
 public class SidewalkProcessor {
 
+    private String outputFileName;
+
     private final static int TO_CROSSROAD = 1;
     private final static int FROM_CROSSROAD = 2;
 
     private final static int NEAREST_LEFT = 1;
     private final static int NEAREST_RIGHT = 2;
-
 
     // hand of the new node by vector {oldNode, crossroad}
     private static final int LEFT = 1;
@@ -62,7 +63,8 @@ public class SidewalkProcessor {
 
     private long maxId = 0;
 
-    public SidewalkProcessor() {
+    public SidewalkProcessor(String outputFileName) {
+        this.outputFileName = outputFileName;
     }
 
     public void addBound(BoundContainer boundContainer) {
@@ -600,7 +602,7 @@ public class SidewalkProcessor {
     }
 
     private void writeOsmXml() {
-        XmlWriter xmlWriter = new XmlWriter(new File("output.osm"), CompressionMethod.None);
+        XmlWriter xmlWriter = new XmlWriter(new File(outputFileName + ".osm"), CompressionMethod.None);
 
         for (BoundContainer bound : bounds)
             xmlWriter.process(bound);
@@ -626,8 +628,10 @@ public class SidewalkProcessor {
 
             if (footwaySidewalk && highway)
                 log("Probably mutually exclusive tags: wayId=" + way.getEntity().getId() + " " + name);
-            if (tagToRemove != null)
+            if (tagToRemove != null) {
                 way.getEntity().getTags().remove(tagToRemove);
+                way.getEntity().getTags().add(new Tag("foot", "no"));
+            }
             xmlWriter.process(way);
         }
         for (WayContainer way : newWritableWays)

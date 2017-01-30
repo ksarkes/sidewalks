@@ -49,8 +49,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException, XMLStreamException
     {
-        if (args.length < 1) {
-            System.out.println("1st argument should be OSM XML file");
+        if (args.length < 2) {
+            System.out.println("1st argument should be OSM XML file, 2nd argument as output file name");
             return;
         }
 
@@ -66,7 +66,7 @@ public class Main {
         // configure it to create readers that coalesce adjacent character sections
         factory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.TRUE);
         XMLStreamReader r = factory.createXMLStreamReader(input);
-        SidewalkProcessor processor = new SidewalkProcessor();
+        SidewalkProcessor processor = new SidewalkProcessor(args[1]);
         Sink sink = new Sink() {
             @Override
             public void process(EntityContainer entityContainer) {
