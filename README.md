@@ -1,5 +1,5 @@
 # Sidewalks
-Utility to generate footpaths for OSM-ways with `sidewalk` tag. 
+Utility for footpaths generating for OSM-ways with `sidewalk` tag. 
 
 It iterates through all `sidewalk` ways and finds
 nearest left and right node for each iterable node. Then it creates new node on bisector of angle 
